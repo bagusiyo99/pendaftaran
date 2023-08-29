@@ -31,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #212121;
+    /* color: #212121; */
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     text-rendering: optimizeLegibility;
@@ -213,7 +213,7 @@ a:focus {
 }
 
 .bg-overlay:after {
-    background-color: rgba(0, 46, 91, 0.8);
+    /* background-color: rgba(0, 46, 91, 0.8); */
     z-index: 0;
     position: absolute;
     content: '';
@@ -228,7 +228,7 @@ a:focus {
 }
 
 .bg-overlay:after {
-    background-color: rgba(0, 0, 0, 0.8);
+    /* background-color: rgba(0, 0, 0, 0.8); */
     z-index: 0;
     position: absolute;
     content: '';
@@ -890,7 +890,7 @@ ul.top-info-box>li.nav-search i {
 
 .navbar-dark .navbar-toggler-icon,
 .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("Logo/menu.png");
 }
 
 ul.navbar-nav>li:hover>a,
@@ -2449,8 +2449,8 @@ img.testimonial-thumb {
 ================================================== */
 /*- Footer common */
 .footer {
-    background-color: #0d0d0d;
-    color: #999;
+    background-color: #198754;
+    color: #fbf9f9;
 }
 
 .footer-main {
@@ -2509,7 +2509,7 @@ img.testimonial-thumb {
 
 /* Links */
 .footer-widget ul.list-arrow li {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.07); */
     padding: 8px 0;
 }
 
@@ -2519,7 +2519,7 @@ img.testimonial-thumb {
 
 .footer-widget ul.list-arrow li a,
 .footer-widget ul.list-arrow li:before {
-    color: #747474;
+    color: #f4f1f1;
 }
 
 .footer-widget ul.list-arrow li:hover a,
