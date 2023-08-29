@@ -1,5 +1,5 @@
 <div class="container mt-5 text-center">
-    <div class="mapouter mt-5">
+    <div class="mapouter ">
         <div class="gmap_canvas"><iframe width="1395" height="729" id="gmap_canvas"
                 src="https://maps.google.com/maps?q=bandar lampung,kedamaian&t=&z=10&ie=UTF8&iwloc=&output=embed"
                 frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a

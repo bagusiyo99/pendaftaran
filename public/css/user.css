@@ -1,3 +1,7 @@
+.info-bg {
+    background-color: #198754;
+}
+
 #asked::after {
     content: "";
     background-color: #fff;
@@ -203,12 +207,11 @@ nav {
 
 /* About-user */
 .info {
-    height: 80vh;
+    height: 40vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 29px;
 }
 
 .info .main-info img {
@@ -254,6 +257,8 @@ nav {
     letter-spacing: 1px;
     margin-bottom: 15px;
     text-align: justify;
+    font-family: 'Roboto',
+        sans-serif;
 }
 
 /* Fitur */

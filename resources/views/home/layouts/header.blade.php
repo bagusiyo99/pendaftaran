@@ -1,3 +1,9 @@
+<style>
+    .active {
+        color: rgb(141, 31, 220);
+    }
+</style>
+
 <div id="top-bar" class="top-bar">
     <div class="container">
         <div class="row">
@@ -102,13 +108,11 @@
                             <ul class="nav navbar-nav mr-auto">
 
 
-                                <li class="nav-item"> <a
-                                        class="nav-link  {{ Request::is('menu') ? 'menu-active' : '' }}"
+                                <li class="nav-item"> <a class="nav-link  {{ Request::is('menu') ? 'active' : '' }}"
                                         href="/">Menu</a>
                                 </li>
 
-                                <li class="nav-item"> <a
-                                        class="nav-link  {{ Request::is('blog') ? 'menu-active' : '' }}"
+                                <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
                                         href="/blog">Blog</a>
                                 </li>
 

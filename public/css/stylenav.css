@@ -130,10 +130,13 @@ a.read-more:hover {
     color: #222;
 }
 
-section,
-.section-padding {
+
+.ts-features {
     padding: 70px 0;
     position: relative;
+    background-color: #198754;
+    color: white;
+
 }
 
 .no-padding {
@@ -526,7 +529,7 @@ a[href^=tel] {
 }
 
 .btn-primary {
-    background: #ffb600;
+    background: #198754;
 }
 
 .btn-dark {
@@ -881,7 +884,7 @@ ul.top-info-box>li.nav-search i {
     padding: 6px;
     border-radius: 0;
     font-size: 1rem;
-    background: #ffb600;
+    background: #eeece8;
 }
 
 .navbar-toggler:focus {
@@ -1197,6 +1200,7 @@ ul.navbar-nav>li>a {
     text-transform: capitalize;
     color: #fff;
     margin-top: 5px;
+    background: #198754;
 }
 
 @media (max-width: 1200px) {
@@ -1212,8 +1216,8 @@ ul.navbar-nav>li>a {
 }
 
 .header-get-a-quote .btn-primary:hover {
-    background: #272d33;
-    color: #ffb600 !important;
+    background: #ce8d09;
+    color: #f2f1ee !important;
 }
 
 ul.navbar-nav>li.header-get-a-quote:hover>a:after {
@@ -1915,7 +1919,7 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
     display: inline-block;
     margin: 20px 0 50px;
     width: 100%;
-    border-bottom: 3px solid #ffb600;
+    border-bottom: 5px solid #198754;
 }
 
 .shuffle-btn-group label {
@@ -1932,8 +1936,8 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
 }
 
 .shuffle-btn-group label.active {
-    color: #212121;
-    background: #ffb600;
+    color: #f3ecec;
+    background: #198754;
 }
 
 .shuffle-btn-group label input {
@@ -2137,6 +2141,7 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
 
 .accordion-group .card-body {
     padding: 15px 20px;
+    color: #000;
 }
 
 .accordion-group .card-body img {
@@ -2465,13 +2470,14 @@ img.testimonial-thumb {
     padding-left: 15px;
     text-transform: uppercase;
     color: #fff;
-    border-left: 3px solid #ffb600;
+    border-left: 3px solid #f7f6f4;
 }
 
 /* Footer about us */
 .footer-logo {
-    margin-bottom: 25px;
-    max-height: 35px;
+    /* margin-bottom: 25px; */
+    width: 210px;
+    /* max-height: 35px; */
 }
 
 /* Footer social */
@@ -2498,7 +2504,7 @@ img.testimonial-thumb {
 .footer-social ul li a i {
     display: block;
     font-size: 16px;
-    color: #999;
+    color: #f6f5f5;
     transition: 400ms;
     padding: 10px 13px;
 }
@@ -2524,7 +2530,7 @@ img.testimonial-thumb {
 
 .footer-widget ul.list-arrow li:hover a,
 .footer-widget ul.list-arrow li:hover {
-    color: #ffb600;
+    color: #f9f8f6;
 }
 
 .working-hours {

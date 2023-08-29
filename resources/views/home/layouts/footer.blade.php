@@ -208,20 +208,13 @@
       </div><!-- Copyright end -->
   </footer><!-- Footer end -->
 
-  <script>
-      $(document).ready(function() {
-          $('#table_id').DataTable();
-      });
-  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-   
-                                                                                                                                                                                                      MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                                                                                                                                                                                                                      MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
 
-  <script type="text/javascript" src="/DataTables/datatables.min.js"></script>
 
-  <script src="/js1/script.js"></script>
   <!-- initialize jQuery Library -->
   <script src="plugins/jQuery/jquery.min.js"></script>
   <!-- Bootstrap jQuery -->
@@ -233,11 +226,19 @@
   <script src="plugins/colorbox/jquery.colorbox.js"></script>
   <!-- shuffle -->
   <script src="plugins/shuffle/shuffle.min.js" defer></script>
+  <script src="/js1/script.js"></script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
       AOS.init();
   </script>
+
+  {{-- data table --}}
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script src="/datatable/script.js"></script>
+
   </body>
 
   </html>

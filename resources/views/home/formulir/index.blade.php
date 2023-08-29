@@ -2,12 +2,12 @@
     <img src="/img/sd.jpg" width="100%" class="img-fluid" alt="...">
 </div>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
     <div class="card-body">
-        <h1 class="text-center mb-2">Formulir </h1>
+        <h1 class="text-center mb-5">Formulir </h1>
         <form action="">
 
-            <table class="table table-bordered text-center align-items-center" id="example">
+            <table class="table table-bordered text-center" id="data">
 
                 <thead class="table-primary text-center">
                     <tr class="text-center">

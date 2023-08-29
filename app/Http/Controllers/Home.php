@@ -79,15 +79,5 @@ class Home extends Controller
     }
 
 
-         
-        function siswa (){
-    $data = [
-    
-     
-        'siswa' => SiswaBaru::get(),
 
-        'content'=> 'admin/siswa/index'
-    ];
-    return view('admin.layouts.wrapper',$data);
-    }
 }
