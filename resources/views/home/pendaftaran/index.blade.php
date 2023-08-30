@@ -9,6 +9,9 @@
 
     <div class="container">
 
+        @if (session('error'))
+            <div class="alert alert-danger">{{ session('error') }}</div>
+        @endif
 
         <div class="container mt-5  mb-5">
             <div class="text-center">

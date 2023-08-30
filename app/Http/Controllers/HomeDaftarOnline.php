@@ -16,12 +16,13 @@ class HomeDaftarOnline extends Controller
     function index ()
     {
     $data = [
-        'content'=> 'home/daftar_online/index'
+        'content'=> 'home/daftar_online/index',
+            // 'daftar_online' => DaftarOnline::limit(10)->get(),
     ];
     return view('home.layouts.wrapper',$data);
     }
 
-         function send  (Request $request)
+    function send  (Request $request)
     {
         $data = $request -> validate ([
             'nisn' => 'required|max:12',
@@ -110,6 +111,10 @@ class HomeDaftarOnline extends Controller
             $data ['file'] =$storage .$file_name;
         }else {
             $data ['file'] = null;
+        }
+
+        if (DaftarOnline::max(1)) {
+            
         }
 
         DaftarOnline::create($data);

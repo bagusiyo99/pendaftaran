@@ -16,7 +16,9 @@ class HomePendaftaran extends Controller
     function index ()
     {
     $data = [
+        // 'pendaf' => Pendaftaran::max(1)->get(),
         'content'=> 'home/pendaftaran/index'
+        
     ];
     return view('home.layouts.wrapper',$data);
     }
@@ -54,6 +56,11 @@ class HomePendaftaran extends Controller
             $data ['gambar'] = null;
         }
 
+            $pendaf = Pendaftaran::count('id');
+
+            if ($pendaf >= 1) {
+                return redirect()->back()->with('error', 'Pendaftaran Di tutup.');
+            }
         Pendaftaran::create($data);
         Alert::success('sukses', 'Pesan berhasil dikirim');
         return redirect('/pendaftaran');

@@ -305,6 +305,13 @@
               </a>
             </li>
 
+                        <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
+              <a href="{{ route('pendaftaran.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Data daftars Siswa</div>
+              </a>
+            </li>
+
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Pages</span>
             </li>

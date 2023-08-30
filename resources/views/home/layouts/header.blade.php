@@ -156,6 +156,8 @@
                                         <li> <a href="/formulir" class="dropdown-item">Formulir</a>
                                         </li>
                                         <li> <a href="/daftar_online" class="dropdown-item">Daftar Sekarang</a></li>
+                                        <li> <a href="/pendaftaran" class="dropdown-item"> Pendaftaran</a></li>
+
                                     </ul>
                                 </li>
 
