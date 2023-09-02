@@ -206,6 +206,11 @@ a:focus {
     background: #f0f0f0;
 }
 
+.register-left p {
+    text-align: left;
+    font-size: 20px;
+}
+
 .bg-overlay {
     position: relative;
 }
@@ -525,7 +530,7 @@ a[href^=tel] {
 
 .btn-white.btn-primary {
     background: #fff;
-    color: #ffb600;
+    color: #eeb21a;
 }
 
 .btn-primary {
@@ -550,7 +555,7 @@ a[href^=tel] {
 .btn-white.btn-primary:hover:active,
 .btn-white.btn-primary:hover:focus {
     color: #fff;
-    background-color: #111 !important;
+    background-color: #eeb21a !important;
 }
 
 .general-btn {
@@ -699,9 +704,9 @@ ul.top-info li p.info-text {
     }
 }
 
-.header-one .logo-area {
+/* .header-one .logo-area {
     padding: 30px 0;
-}
+} */
 
 .navbar-fixed {
     z-index: 9999;
@@ -743,7 +748,7 @@ ul.navbar-nav>li.active>a {
 /*-- Logo --*/
 .logo img {
     width: auto;
-    height: 95px;
+    height: 125px;
 }
 
 .header-two .logo img {
@@ -1206,6 +1211,8 @@ ul.navbar-nav>li>a {
 @media (max-width: 1200px) {
     .header-get-a-quote .btn-primary {
         padding: 12px !important;
+        margin-bottom: 15px;
+
     }
 }
 
@@ -1216,7 +1223,7 @@ ul.navbar-nav>li>a {
 }
 
 .header-get-a-quote .btn-primary:hover {
-    background: #ce8d09;
+    background: #ecb903;
     color: #f2f1ee !important;
 }
 
@@ -2594,9 +2601,10 @@ img.testimonial-thumb {
     width: 36px;
     height: 36px;
     line-height: 36px;
-    background: rgba(0, 0, 0, 0.9);
+    background: #dab111;
+
     border-radius: 3px;
-    color: #ffb600;
+    color: #e8e6e3;
     font-weight: 700;
     font-size: 16px;
     padding: 0;

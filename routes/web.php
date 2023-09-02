@@ -64,8 +64,8 @@ Route::get('/contact', [HomeContact::class, 'index']);
 Route::post('/contact/send', [HomeContact::class, 'send']);
 
 
-Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
-Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
+// Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
+// Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
 
 Route::get('/daftar_online', [HomeDaftarOnline::class, 'index']);
 Route::post('/daftar_online/send', [HomeDaftarOnline::class, 'send']);
@@ -74,7 +74,11 @@ Route::post('/daftar_online/send', [HomeDaftarOnline::class, 'send']);
 Route::get('/pendaftaran-export', [AdminPendaftaran::class, 'export']);
 Route::get('/daftar_online-export', [AdminDaftarOnline::class, 'export']);
 
+Route::middleware('check.pendaftar.limit')->group(function () {
+Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
+Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
 
+});
 
 Route::get('/about', function () {
     $data = [
@@ -89,6 +93,22 @@ Route::get('/sukses', function () {
     ];
     return view('home.layouts.wrapper',$data);
 });
+
+
+Route::get('/penuh', function () {
+    $data = [
+        'content'=> 'home/penuh/index'
+    ];
+    return view('home.layouts.wrapper',$data);
+});
+
+Route::get('/full', function () {
+    $data = [
+        'content'=> 'home/full/index'
+    ];
+    return view('home.layouts.wrapper',$data);
+});
+
 
 Route::get('/alamat', function () {
     $data = [

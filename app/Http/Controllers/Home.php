@@ -47,9 +47,7 @@ class Home extends Controller
     function blog (){
     $data = [
     
-     
         'blog' => Blog::get(),
-
         'content'=> 'home/blog/index'
     ];
     return view('home.layouts.wrapper',$data);

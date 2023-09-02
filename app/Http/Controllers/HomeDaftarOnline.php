@@ -17,7 +17,7 @@ class HomeDaftarOnline extends Controller
     {
     $data = [
         'content'=> 'home/daftar_online/index',
-            // 'daftar_online' => DaftarOnline::limit(10)->get(),
+        // 'daftar_online' => DaftarOnline::limit(10)->get(),
     ];
     return view('home.layouts.wrapper',$data);
     }
@@ -50,7 +50,8 @@ class HomeDaftarOnline extends Controller
             'penghasilan_ibu' => 'required ',
 
         ],
-      [
+
+            [
                 'nisn.required'=> 'Tidak Boleh Kosong',
                 'nik.required'=> 'Tidak Boleh Kosong',
                 'nama_siswa.required'=> 'Tidak Boleh Kosong',

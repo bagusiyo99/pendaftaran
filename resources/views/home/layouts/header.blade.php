@@ -80,7 +80,7 @@
                                 </div>
                             </li>
                             <li class="header-get-a-quote">
-                                <a class="btn btn-primary" href="contact.html">Login</a>
+                                <a class="btn btn-primary" href="/pendaftaran">Daftar Sekarang</a>
                             </li>
                         </ul><!-- Ul end -->
                     </div><!-- header right end -->
@@ -155,7 +155,7 @@
                                         </li>
                                         <li> <a href="/formulir" class="dropdown-item">Formulir</a>
                                         </li>
-                                        <li> <a href="/daftar_online" class="dropdown-item">Daftar Sekarang</a></li>
+                                        <li> <a href="/daftar_online" class="dropdown-item">Daftar Ulang</a></li>
                                         <li> <a href="/pendaftaran" class="dropdown-item"> Pendaftaran</a></li>
 
                                     </ul>

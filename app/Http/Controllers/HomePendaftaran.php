@@ -31,7 +31,7 @@ class HomePendaftaran extends Controller
             'alamat' => 'required',
             'telpon' => 'required ',
             'pesan' => 'required ',
-            'gambar' => 'required',
+            // 'gambar' => 'required',
         ],
       [
                 'nama.required'=> 'Nama Lengkap WAJIB DIISI',
@@ -44,28 +44,35 @@ class HomePendaftaran extends Controller
             ]);
        
 
-                // upload gambar
-        if ($request -> hasFile('gambar')) {
-            $gambar = $request->file('gambar');
-            $file_name = time ().'-'. $gambar -> getClientOriginalName ();
+        //         // upload gambar
+        // if ($request -> hasFile('gambar')) {
+        //     $gambar = $request->file('gambar');
+        //     $file_name = time ().'-'. $gambar -> getClientOriginalName ();
 
-            $storage = 'uploads/pendaftaran/';
-            $gambar->move ($storage, $file_name);
-            $data ['gambar'] =$storage .$file_name;
-        }else {
-            $data ['gambar'] = null;
-        }
-
+        //     $storage = 'uploads/pendaftaran/';
+        //     $gambar->move ($storage, $file_name);
+        //     $data ['gambar'] =$storage .$file_name;
+        // }else {
+        //     $data ['gambar'] = null;
+        // }
+                // $pendaf = new Pendaftaran();
+                // $pendaf->nama = $request->input('nama');
+                // $pendaf->jenis_kelamin = $request->input('eam');
+                // $pendaf->nomor_telepon = $request->input('alamat');
             $pendaf = Pendaftaran::count('id');
 
             if ($pendaf >= 1) {
-                return redirect()->back()->with('error', 'Pendaftaran Di tutup.');
+                // return redirect()->back()->with('error', 'Pendaftaran Di tutup.');
+                        Alert::error ('Gagal', 'Pendaftaran Gagal');
+                        return redirect('/penuh');
             }
         Pendaftaran::create($data);
-        Alert::success('sukses', 'Pesan berhasil dikirim');
-        return redirect('/pendaftaran');
+        Alert::success('sukses', 'Pendaftaran Sukses');
+        return redirect('/sukses');
         
 
     }
+
+    
 
 }

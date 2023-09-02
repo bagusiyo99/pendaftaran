@@ -35,7 +35,7 @@
 
             </div><!-- Col end -->
             <div class="col-lg-6 mt-5">
-                <h3 class="column-title">Pendaftaran Sukses</h3>
+                <h3 class="column-title">Pendaftaran FUlll</h3>
                 <p>Silahkan menunggu konfirmasi dari admin melalui email dan nomor telpon sesuai pengisian
                     formulir</p>
                 <blockquote>

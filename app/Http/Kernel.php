@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'auth.admin' => \App\Http\Middleware\Admin::class,
         'auth.wali' => \App\Http\Middleware\Wali::class,
         'auth.operator' => \App\Http\Middleware\Operator::class,
+        'check.pendaftar.limit' => \App\Http\Middleware\CheckPendaftarLimit::class,
     ];
 }
