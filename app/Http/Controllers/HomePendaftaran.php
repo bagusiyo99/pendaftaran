@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Facades\Response;
 
 class HomePendaftaran extends Controller
 {
@@ -16,7 +18,7 @@ class HomePendaftaran extends Controller
     function index ()
     {
     $data = [
-        // 'pendaf' => Pendaftaran::max(1)->get(),
+        // 'pendaftaran' => Pendaftaran::max(1)->get(),
         'content'=> 'home/pendaftaran/index'
         
     ];
@@ -59,20 +61,40 @@ class HomePendaftaran extends Controller
                 // $pendaf->nama = $request->input('nama');
                 // $pendaf->jenis_kelamin = $request->input('eam');
                 // $pendaf->nomor_telepon = $request->input('alamat');
-            $pendaf = Pendaftaran::count('id');
+            $pendaftaran = Pendaftaran::count('id');
 
-            if ($pendaf >= 1) {
+            if ($pendaftaran >= 1) {
                 // return redirect()->back()->with('error', 'Pendaftaran Di tutup.');
                         Alert::error ('Gagal', 'Pendaftaran Gagal');
                         return redirect('/penuh');
             }
         Pendaftaran::create($data);
+    //     $pdf = PDF::loadView('kwitansi', ['pendaftaran' => $pendaftaran]);
+    // return $pdf->download('kwitansi_' . $pendaftaran->id . '.pdf');
         Alert::success('sukses', 'Pendaftaran Sukses');
-        return redirect('/sukses');
+return redirect('/sukses')->with('nama', $request->input('nama'));
         
 
     }
 
-    
+public function downloadKwitansi($nama)
+{
+   
+    // Make sure the variable $nama is correctly defined as a method parameter
+
+    $namax = $nama; // Use the provided $nama parameter
+
+    $pendaftaran = Pendaftaran::where('nama', $namax)->first();
+
+
+      $pdf = PDF::loadView('home.pendaftaran.kwitansi', compact('pendaftaran'));
+
+  $pdfPath = storage_path('app/public/kwitansi_' . $pendaftaran->namax . '.pdf');
+  $pdf->save($pdfPath);
+
+ $downloadFileName = 'kwitansi_' . $pendaftaran->namax . '.pdf';
+// return view('home.pendaftaran.kwitansi');
+    return response()->download($pdfPath, $downloadFileName)->deleteFileAfterSend(true);
+}
 
 }

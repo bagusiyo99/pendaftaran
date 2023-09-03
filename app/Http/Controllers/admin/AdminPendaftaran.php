@@ -35,7 +35,7 @@ class AdminPendaftaran extends Controller
         'pendaftaran' => Pendaftaran::find($id),
         'content'=> 'operator/pendaftaran/show'
     ];
-    return view('operator.banner.index',$data);
+    return view('operator.pendaftaran.show',$data);
     }
 
         public function destroy($id)

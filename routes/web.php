@@ -21,6 +21,7 @@ use App\Http\Controllers\HomeDaftarOnline;
 use App\Http\Controllers\HomeFoto;
 use App\Http\Controllers\HomePendaftaran;
 use App\Http\Controllers\HomeSiswa;
+use App\Http\Controllers\Kwitansi;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -79,6 +80,8 @@ Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
 Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
 
 });
+
+Route::get('/download-kwitansi/{nama}', [HomePendaftaran::class, 'downloadKwitansi']);
 
 Route::get('/about', function () {
     $data = [

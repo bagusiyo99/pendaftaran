@@ -116,6 +116,11 @@
                                         href="/blog">Blog</a>
                                 </li>
 
+
+                                <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
+                                        href="pendaftaran">daftar</a>
+                                </li>
+
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tentang
                                         Kami

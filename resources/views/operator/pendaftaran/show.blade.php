@@ -6,12 +6,12 @@
             <div class="card">
                 <div class="card-body">
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="">Gambar</label>
-                    </div>
-                    @if (isset($pendaftaran))
+                    </div> --}}
+                    {{-- @if (isset($pendaftaran))
                         <img src="/{{ $pendaftaran->gambar }}" width="900px" height="700px" class="mt-4" alt="">
-                    @endif
+                    @endif --}}
 
                     <div class="form-group mt-3">
                         <label for="">Nama Lengkap</label>

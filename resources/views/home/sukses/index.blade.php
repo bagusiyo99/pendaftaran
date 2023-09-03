@@ -1,4 +1,4 @@
-<div>
+{{-- <div>
     <img src="/img/sd.jpg" width="100%" height="400px" alt="...">
 </div>
 {{-- <div class="container mt-5">
@@ -47,8 +47,16 @@
 
             </div><!-- Col end -->
 
+            <p>Nama: {{ session('nama') }}</p>
+            <a href="/download-kwitansi/{{ session('nama') }}" target="_blank">Unduh Kwitansi</a>
+            {{-- <a href="{{ route('downloadKwitansi', ['nama' => session('nama')]) }}" target="_blank">Unduh Kwitansi</a> --}}
+
+            Kwitansi</a>
+
+
+
 
         </div><!-- Content row end -->
 
     </div><!-- Container end -->
-</section><!-- Main container end -->
+</section><!-- Main container end --> --}}
