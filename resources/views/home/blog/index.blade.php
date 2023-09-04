@@ -5,25 +5,35 @@
 
        <div class="container1 mt-5">
            <div class="blog-berita" data-aos="fade-right" data-aos-offset="700" data-aos-easing="ease-in-sine">
-
                <h2 class="h2">Kegiatan</h2>
-               @foreach ($blog as $item)
+               @foreach ($blogs as $blog)
+                   {{-- <div class="blog-card-group">
+                       <div class="blog-card">
+                           <!-- Display blog post details here -->
+                           <h5 class="blog-tulis">{{ $blog->created_at->format('d F Y') }}</h5>
+                           <img src="/{{ $blog->gambar }}" width="150" class="blog-banner-img">
+                           <p class="blog-text">{!! Str::limit($blog->deskripsi, 300) !!}</p>
+                           <a href="/blog/{{ $blog->id }}" class="blog-topic text-tiny">Detail</a>
+                       </div>
+                   </div> --}}
                    <div class="blog-card-group">
                        <div class="blog-card">
                            <div class="blog-card-banner">
-                               <img src="/{{ $item->gambar }}" width="150" class="blog-banner-img">
+                               <img src="/{{ $blog->gambar }}" width="150" class="blog-banner-img">
                            </div>
                            <div class="blog-content-wrapper">
-                               <h5 class="blog-tulis ">{{ $item->created_at->format('d F Y ') }}</h5>
-                               <h3 class="h3"> {{ $item->judul }}</h3>
+                               <h5 class="blog-tulis ">{{ $blog->created_at->format('d F Y ') }}</h5>
+                               <h3 class="jdl15"> {{ $blog->judul }}</h3>
                                <p class="blog-text">
-                                   {!! Str::limit($item->deskripsi, 300) !!}</p>
-                               <a href="/blog/{{ $item->id }}" class="blog-topic text-tiny">Detail</a>
+                                   {!! Str::limit($blog->deskripsi, 300) !!}</p>
+                               <a href="/blog/{{ $blog->id }}" class="blog-topic text-tiny">Detail</a>
                            </div>
                        </div>
                    </div>
                @endforeach
 
+               <!-- Add pagination links here if needed -->
+               {{-- {{ $blogs->links() }} --}}
            </div>
 
 

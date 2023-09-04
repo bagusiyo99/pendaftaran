@@ -3,6 +3,11 @@
 
 }
 
+.jdl15 {
+    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .register {
     background: -webkit-linear-gradient(left, #198754, #06af4a);
     margin-top: 3%;

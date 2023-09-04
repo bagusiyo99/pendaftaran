@@ -14,8 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('komens', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        $table->id();
+        $table->unsignedBigInteger('blog_id');
+        $table->string('nama');
+        $table->text('isi');
+        $table->foreign('blog_id')->references('id')->on('blogs')->onDelete('cascade');
+        $table->timestamps();
+
+
         });
     }
 

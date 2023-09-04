@@ -37,8 +37,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 
+<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+    <script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    
+    <!-- include summernote css/js-->
+    <link href="summernote-bs5.css" rel="stylesheet">
+    <script src="summernote-bs5.js"></script>
+
 
     <!-- Favicon -->
      <link rel="icon" type="image/x-icon" href="/assets/img/favicon/logo.png" />
@@ -312,6 +318,8 @@
               </a>
             </li>
 
+   
+
             <li class="menu-header small text-uppercase">
               <span class="menu-header-text">Pages</span>
             </li>
@@ -572,6 +580,13 @@
          });
      </script>
 
+ <script>
+     $('#summernote').summernote({
+         placeholder: 'Hello Bootstrap 5',
+         tabsize: 2,
+         height: 100
+     });
+ </script>
 
   </body>
 </html>

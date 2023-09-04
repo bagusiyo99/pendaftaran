@@ -43,27 +43,6 @@ class Home extends Controller
 
 
 
-    //khusus blog
-    function blog (){
-    $data = [
-    
-        'blog' => Blog::get(),
-        'content'=> 'home/blog/index'
-    ];
-    return view('home.layouts.wrapper',$data);
-    }
-
-
-
-        public function detailBlog($id)
-    {
-    $data = [
-        'blog' => Blog::find($id),
-        'content'=> 'home/blog/detail'
-    ];
-    return view('home.layouts.wrapper',$data);
-    }
-
 
         function formulir (){
     $data = [

@@ -15,12 +15,15 @@ use App\Http\Controllers\admin\AdminFormulir;
 use App\Http\Controllers\admin\AdminFoto;
 use App\Http\Controllers\AdminDaftarOnline;
 use App\Http\Controllers\AdminSiswa;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\HomeBlog;
 use App\Http\Controllers\HomeContact;
 use App\Http\Controllers\HomeDaftarOnline;
 use App\Http\Controllers\HomeFoto;
 use App\Http\Controllers\HomePendaftaran;
 use App\Http\Controllers\HomeSiswa;
+use App\Http\Controllers\komenController;
 use App\Http\Controllers\Kwitansi;
 use Illuminate\Support\Facades\Route;
 
@@ -40,22 +43,14 @@ Route::get('/detail/{id}', [Home::class, 'detail']);
 Route::get('/informasi/{id}', [Home::class, 'informasi']);
 
 
-Route::get('/blog', [Home::class, 'blog']);
-Route::get('/blog/{id}', [Home::class, 'detailBlog']);
-
-
 Route::get('/formulir', [Home::class, 'formulir']);
 
 Route::get('/foto', [HomeFoto::class, 'index']);
 Route::get('/show/{id}', [HomeFoto::class,'detail']);
 
+//  Route::resource('/komen', HomeBlog::class);
 
 
-
-
-
-Route::get('/siswa', [HomeSiswa::class, 'index']);
-Route::post('/siswa/send', [HomeSiswa::class, 'send']);
 
 
 // Route::get('/daftar', [HomeDaftar::class, 'index']);
@@ -64,7 +59,17 @@ Route::post('/siswa/send', [HomeSiswa::class, 'send']);
 Route::get('/contact', [HomeContact::class, 'index']);
 Route::post('/contact/send', [HomeContact::class, 'send']);
 
+// Rute untuk menampilkan formulir input komentar
+Route::get('/komentar', [KomenController::class, 'comen'])->name('komentar.comen');
 
+// Rute untuk menyimpan komentar
+Route::post('/komentar/send', [KomenController::class, 'send'])->name('komentar.send');
+
+
+Route::get('/blog', [HomeBlog::class, 'blog'])->name('blog.index');
+
+// Route to display a specific blog post and its comments
+Route::get('/blog/{id}', [HomeBlog::class, 'detailBlog'])->name('blog.detail');
 // Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
 // Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
 
