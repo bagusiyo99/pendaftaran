@@ -5,7 +5,3 @@ import 'laravel-datatables-vite';
 window.$ = window.jQuery = require('jquery');
 require('summernote/dist/summernote-bs4.css');
 require('summernote');
-
-$(document).ready(function () {
-    $('#summernote').summernote();
-});

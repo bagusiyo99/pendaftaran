@@ -69,6 +69,18 @@ h5 {
     line-height: 24px;
 }
 
+.blog-area {
+    box-shadow: none;
+    border: 1px solid #dadada;
+    padding: 5px 20px;
+    height: 164px;
+    background: none;
+    color: #959595;
+    font-size: 14px;
+    border-radius: 0;
+
+}
+
 .alert .icon {
     margin-right: 15px;
 }
@@ -354,6 +366,11 @@ a:focus {
 }
 
 .form-control:focus {
+    box-shadow: none;
+    border: 1px solid #ffb600;
+}
+
+.blog-area:focus {
     box-shadow: none;
     border: 1px solid #ffb600;
 }

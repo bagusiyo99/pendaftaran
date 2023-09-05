@@ -113,8 +113,8 @@
                            <li>
                                @if ($komen !== null)
                                    @foreach ($komen as $komentar)
-                                       <div class="comment d-flex last border-bottom">
-                                           <!-- <img loading="lazy" class="comment-avatar" alt="author" src="images/news/avator3.png"> -->
+                                       <div class="comment d-flex last border-bottom mb-2 mt-4">
+                                           <img class="comment-avatar mb-4  " alt="author" src="/images/user.png">
                                            <div class="comment-body">
                                                <div class="meta-data">
                                                    <span class="comment-author mr-3">{{ $komentar->nama }}</span>
@@ -151,9 +151,10 @@
                                <input type="text" name="nama" id="nama" class="form-control " required>
                            </div>
 
+                           <label for="isi" class="mb-1 mt-2">Isi komentar</label>
                            <div class="form-group col-sm-6">
-                               <label for="isi">Isi komentar</label>
-                               <textarea name="isi" id="isi" class="form-control" cols="30" rows="10" required></textarea>
+
+                               <textarea name="isi" id="isi" class=" blog-area " cols="50" rows="3" required></textarea>
                            </div>
 
                            <input type="hidden" name="blog_id" value="{{ $blog->id }}">
