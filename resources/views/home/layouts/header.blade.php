@@ -111,7 +111,7 @@
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('menu') ? 'active' : '' }}"
                                         href="/">Menu</a>
                                 </li>
-
+                                {{-- 
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
                                         href="/blog">Blog</a>
                                 </li>
@@ -119,7 +119,7 @@
 
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
                                         href="pendaftaran">daftar</a>
-                                </li>
+                                </li> --}}
 
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tentang
@@ -128,6 +128,7 @@
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="/about">Sambutan & Sejarah</a></li>
                                         <li><a href="#">Akreditas</a></li>
+                                        <li><a href="/blog">Artikel</a></li>
                                         <li><a href="/login">Prestasi</a></li>
                                         <li><a href="#">Alumni</a></li>
                                         <li><a href="#">Visi & Misi</a></li>
@@ -160,7 +161,7 @@
                                         </li>
                                         <li> <a href="/formulir" class="dropdown-item">Formulir</a>
                                         </li>
-                                        <li> <a href="/daftar_online" class="dropdown-item">Daftar Ulang</a></li>
+                                        {{-- <li> <a href="/daftar_online" class="dropdown-item">Daftar Ulang</a></li> --}}
                                         <li> <a href="/pendaftaran" class="dropdown-item"> Pendaftaran</a></li>
 
                                     </ul>

@@ -37,6 +37,14 @@
                         </div>
 
                         <div class="form-group mt-3">
+                            <label for="gambar">Kepala Sekolah <b>(Format:jpg, jpeg, png, Ukuran Maks : 3MB)</b></label>
+                            {!! Form::file('gambar', ['class' => 'form-control']) !!}
+                            <span class="text-danger">{{ $errors->first('gambar') }}</span>
+                            <img src="/{{ settings()->get('gambar') }}" width="300px">
+
+                        </div>
+
+                        <div class="form-group mt-3">
                             <label for="desc">Deskripsi Instansi</label>
                             {!! Form::textarea('desc', settings()->get('desc'), [
                                 'class' => 'form-control',
@@ -58,6 +66,8 @@
                             <img src="/{{ settings()->get('foto') }}" width="300px">
 
                         </div>
+
+
 
                         {!! Form::submit('UPDATE', ['class' => 'btn btn-primary mt-5']) !!}
 

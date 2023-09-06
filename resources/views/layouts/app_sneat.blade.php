@@ -41,10 +41,6 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
     <script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- include summernote css/js-->
-    <link href="summernote-bs5.css" rel="stylesheet">
-    <script src="summernote-bs5.js"></script>
-
 
     <!-- Favicon -->
      <link rel="icon" type="image/x-icon" href="/assets/img/favicon/logo.png" />
@@ -82,6 +78,8 @@
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="/assets/js/config.js"></script>
 
+    <script src="https://cdn.tiny.cloud/1/oyxnpj74pm6jw582clc7c11ha3tqn7r39qaoo4rjmp0xsusu/tinymce/6/tinymce.min.js"
+        referrerpolicy="origin"></script>
     <style>
 
       .layout-navbar .navbar-dropdown .dropdown-menu {
@@ -289,6 +287,13 @@
               </a>
             </li>
 
+            <li class="menu-item {{ \Route::is('komen.*') ? 'active' : '' }}">
+              <a href="{{ route('komen.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Data Komen</div>
+              </a>
+            </li>
+
 
             <li class="menu-item {{ \Route::is('informasi.*') ? 'active' : '' }}">
               <a href="{{ route('informasi.index') }}" class="menu-link">
@@ -304,12 +309,12 @@
               </a>
             </li>
 
-            <li class="menu-item {{ \Route::is('daftar_online.*') ? 'active' : '' }}">
+            {{-- <li class="menu-item {{ \Route::is('daftar_online.*') ? 'active' : '' }}">
               <a href="{{ route('daftar_online.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Data Pendaftaran Siswa</div>
               </a>
-            </li>
+            </li> --}}
 
                         <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
               <a href="{{ route('pendaftaran.index') }}" class="menu-link">
@@ -569,7 +574,7 @@
     {{-- select plugin --}}
     <link rel="stylesheet" href="/assets/select/select2.min.css">
      <script src="/assets/select/select2.min.js"></script>
-     <script>
+     {{-- <script>
          // In your Javascript (external .js resource or <script> tag)
          $(document).ready(function() {
              $('.rupiah').mask("#.##0", {
@@ -578,15 +583,21 @@
 
              $('.select2').select2();
          });
-     </script>
+     </script> --}}
+
 
  <script>
-     $('#summernote').summernote({
-         placeholder: 'Hello Bootstrap 5',
-         tabsize: 2,
-         height: 100
+     tinymce.init({
+         selector: 'textarea#tiny'
      });
  </script>
+
+ // Prevent Bootstrap dialog from blocking focusin
+document.addEventListener('focusin', (e) => {
+  if (e.target.closest(".tox-tinymce, .tox-tinymce-aux, .moxman-window, .tam-assetmanager-root") !== null) {
+    e.stopImmediatePropagation();
+  }
+});
 
   </body>
 </html>

@@ -85,13 +85,13 @@
 </section>
 
 
-<div class="main">
+<div class="main mb-5">
     <h3 class="heading">SAMBUTAN</h3>
 </div>
 
-<section class="info mb-5">
+<section class="info mb-5 mt-5">
     <div class="main-info">
-        <img src="/{{ settings()->get('foto') }}" data-aos="fade-right" data-aos-offset="500"
+        <img src="/{{ settings()->get('gambar') }}" data-aos="fade-right" data-aos-offset="500"
             data-aos-easing="ease-in-sine">
         <div class="tulis" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
             <h4>Assalamualaikum warahmatullahi wabarakatuh</h4>
@@ -104,7 +104,7 @@
 </section>
 
 
-<section id="ts-features" class="ts-features">
+<section id="ts-features" class="ts-features mt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">

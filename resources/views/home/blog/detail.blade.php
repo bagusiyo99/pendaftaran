@@ -34,9 +34,9 @@
                                    <span class="post-author">
                                        <i class="far fa-user"></i><a href="#"> Admin</a>
                                    </span>
-                                   <span class="post-cat">
+                                   {{-- <span class="post-cat">
                                        <i class="far fa-folder-open"></i><a href="#"> News</a>
-                                   </span>
+                                   </span> --}}
                                    <span class="post-meta-date"><i class="far fa-calendar"></i>
                                        {{ $blog->created_at->format('d-m-Y ') }}</span>
                                    <span class="post-comment"><i class="far fa-comment"></i> {{ $jumlahKomentar }} <a
@@ -62,7 +62,7 @@
                                        <li class="social-icons-head">Share:</li>
                                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                       <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+                                       {{-- <li><a href="#"><i class="fab fa-brands fa-tiktok"></i></a></li> --}}
                                        <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                                    </ul>
                                </div>
@@ -113,15 +113,19 @@
                            <li>
                                @if ($komen !== null)
                                    @foreach ($komen as $komentar)
-                                       <div class="comment d-flex last border-bottom mb-2 mt-4">
-                                           <img class="comment-avatar mb-4  " alt="author" src="/images/user.png">
+                                       <div class="comment d-flex last border-bottom mb-3 mt-4">
+                                           <img class="comment-avatar mb-5  " alt="author" src="/img/user.png"
+                                               height="200px">
                                            <div class="comment-body">
+                                               <p class="comment-date">{{ $komentar->created_at->format('d M Y ') }}
+                                               </p>
                                                <div class="meta-data">
-                                                   <span class="comment-author mr-3">{{ $komentar->nama }}</span>
-                                                   {{-- <span
-                                                       class="comment-date float-right">|{{ $komentar->created_at->format('d-m-Y ') }}</span> --}}
+
+                                                   <span
+                                                       class="comment-author mr-3 text-capitalize">{{ $komentar->nama }}</span>
+
                                                </div>
-                                               <div class="comment-content">
+                                               <div class="comment-content text-capitalize">
                                                    <p>{{ $komentar->isi }}</p>
                                                </div>
                                                {{-- <div class="text-left">
@@ -146,15 +150,15 @@
 
                            @csrf
 
-                           <div class="form-group col-sm-6">
-                               <label for="nama">Nama</label>
+                           <div class="form-group col-sm-8">
+                               <label for="nama">Nama Lengkap</label>
                                <input type="text" name="nama" id="nama" class="form-control " required>
                            </div>
 
-                           <label for="isi" class="mb-1 mt-2">Isi komentar</label>
+                           <label for="isi" class="mb-1 mt-2 text-capitalize"> komentar</label>
                            <div class="form-group col-sm-6">
 
-                               <textarea name="isi" id="isi" class=" blog-area " cols="50" rows="3" required></textarea>
+                               <textarea name="isi" id="isi" class=" blog-area " cols="66" rows="3" required></textarea>
                            </div>
 
                            <input type="hidden" name="blog_id" value="{{ $blog->id }}">
@@ -169,7 +173,7 @@
 
                    <div class="sidebar sidebar-right">
                        <div class="widget recent-posts">
-                           <h3 class="widget-title">Recent Posts</h3>
+                           <h3 class="widget-title">Postingan Terbaru</h3>
                            <ul class="list-unstyled">
                                @foreach ($recentBlogs as $recentBlog)
                                    <li class="d-flex align-items-center">
@@ -202,7 +206,7 @@
                     </div><!-- Categories end --> --}}
 
                        <div class="widget">
-                           <h3 class="widget-title">Archives </h3>
+                           <h3 class="widget-title">Pencapaian </h3>
                            <ul class="arrow nav nav-tabs">
                                <li><a href="#"> 2019</a></li>
                                <li><a href="#"> 2020</a></li>

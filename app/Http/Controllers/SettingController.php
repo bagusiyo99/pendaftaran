@@ -38,6 +38,17 @@ class SettingController extends Controller
             }else {
                 $dataSettings ['foto'] = null;
             }
+
+            if ($request -> hasFile('gambar')) {
+                $gambar = $request->file('gambar');
+                $file_name = time ().'-'. $gambar -> getClientOriginalName ();
+
+                $storage = 'uploads/logo/';
+                $gambar->move ($storage, $file_name);
+                $dataSettings ['gambar'] =$storage .$file_name;
+            }else {
+                $dataSettings ['gambar'] = null;
+            }
         settings()->set($dataSettings);
         flash ('Data Berhasil Disimpan');
         return back();

@@ -14,6 +14,7 @@ use App\Http\Controllers\admin\AdminPesan;
 use App\Http\Controllers\admin\AdminFormulir;
 use App\Http\Controllers\admin\AdminFoto;
 use App\Http\Controllers\AdminDaftarOnline;
+use App\Http\Controllers\AdminKomen;
 use App\Http\Controllers\AdminSiswa;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\Home;
@@ -149,6 +150,8 @@ Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function
     
     Route::resource('/about', AdminAbout::class);
     Route::resource('/pesan', AdminPesan::class);
+    Route::resource('/komen', AdminKomen::class);
+
     Route::resource('/pendaftaran', AdminPendaftaran::class);
     Route::resource('setting', SettingController::class);
 
