@@ -57,13 +57,15 @@ class HomePendaftaran extends Controller
         // }else {
         //     $data ['gambar'] = null;
         // }
+
+        // cara manual 
                 // $pendaf = new Pendaftaran();
                 // $pendaf->nama = $request->input('nama');
                 // $pendaf->jenis_kelamin = $request->input('eam');
                 // $pendaf->nomor_telepon = $request->input('alamat');
             $pendaftaran = Pendaftaran::count('id');
 
-            if ($pendaftaran >= 1) {
+            if ($pendaftaran >= 5) {
                 // return redirect()->back()->with('error', 'Pendaftaran Di tutup.');
                         Alert::error ('Gagal', 'Pendaftaran Gagal');
                         return redirect('/penuh');

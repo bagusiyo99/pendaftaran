@@ -49,12 +49,24 @@ class AdminPendaftaran extends Controller
         
     }
 
+    public function hapusSemuaPendaftaran()
+{
+    // Hapus semua data siswa dari tabel siswas
+    $pendaftaran = Pendaftaran::truncate();
+    $pendaftaran->delete();
 
-    //     public function export() 
-    // {
-    //     return Excel::download(new PendaftaransExport ,'pendaftaran-'.Carbon::now()->timestamp. '.xlsx');
-    // }
+    Alert::alert('sukses', 'data berhasil dihapus');
+    return redirect('/operator/pendaftaran')->with('message', 'Semua pendaftaran telah dihapus.');
+}
 
+
+        public function export() 
+    {
+        return Excel::download(new PendaftaransExport ,'pendaftaran-'.Carbon::now()->timestamp. '.xlsx');
+    }
+
+
+    
 
 }
 

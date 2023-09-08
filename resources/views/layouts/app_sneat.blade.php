@@ -269,7 +269,7 @@
             <li class="menu-item {{ \Route::is('blog.*') ? 'active' : '' }}">
               <a href="{{ route('blog.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Blog</div>
+                <div data-i18n="Basic">Data Artikel</div>
               </a>
             </li>
 
@@ -309,6 +309,13 @@
               </a>
             </li>
 
+              <li class="menu-item {{ \Route::is('foto.*') ? 'active' : '' }}">
+              <a href="{{ route('foto.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Data Foto</div>
+              </a>
+            </li>
+
             {{-- <li class="menu-item {{ \Route::is('daftar_online.*') ? 'active' : '' }}">
               <a href="{{ route('daftar_online.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
@@ -319,7 +326,7 @@
                         <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
               <a href="{{ route('pendaftaran.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data daftars Siswa</div>
+                <div data-i18n="Basic">Data Pendaftaran Siswa</div>
               </a>
             </li>
 
@@ -376,7 +383,7 @@
                 <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
               <i class="bx bx-bell bx-sm"></i>
-              <span class="badge bg-danger rounded-pill badge-notifications">fff</span>
+              <span class="badge bg-danger rounded-pill badge-notifications">0</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-end py-0">
               <li class="dropdown-menu-header border-bottom">
@@ -592,12 +599,7 @@
      });
  </script>
 
- // Prevent Bootstrap dialog from blocking focusin
-document.addEventListener('focusin', (e) => {
-  if (e.target.closest(".tox-tinymce, .tox-tinymce-aux, .moxman-window, .tam-assetmanager-root") !== null) {
-    e.stopImmediatePropagation();
-  }
-});
+ 
 
   </body>
 </html>

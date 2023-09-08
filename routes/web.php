@@ -26,6 +26,7 @@ use App\Http\Controllers\HomePendaftaran;
 use App\Http\Controllers\HomeSiswa;
 use App\Http\Controllers\komenController;
 use App\Http\Controllers\Kwitansi;
+use App\Http\Controllers\PencarianController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -51,7 +52,8 @@ Route::get('/show/{id}', [HomeFoto::class,'detail']);
 
 //  Route::resource('/komen', HomeBlog::class);
 
-
+// Rute untuk pencarian
+// Route::get('/blogs/search', [PencarianController::class, 'search'])->name('blog.search');
 
 
 // Route::get('/daftar', [HomeDaftar::class, 'index']);
@@ -60,34 +62,42 @@ Route::get('/show/{id}', [HomeFoto::class,'detail']);
 Route::get('/contact', [HomeContact::class, 'index']);
 Route::post('/contact/send', [HomeContact::class, 'send']);
 
+
+
+// komentar blog atau artikel
+Route::get('/blog', [HomeBlog::class, 'blog'])->name('blog.index');
+// Route to display a specific blog post and its comments
+Route::get('/blog/{id}', [HomeBlog::class, 'detailBlog'])->name('blog.detail');
 // Rute untuk menampilkan formulir input komentar
 Route::get('/komentar', [KomenController::class, 'comen'])->name('komentar.comen');
 
 // Rute untuk menyimpan komentar
 Route::post('/komentar/send', [KomenController::class, 'send'])->name('komentar.send');
+// akhir komentar blog atau artikel
 
 
-Route::get('/blog', [HomeBlog::class, 'blog'])->name('blog.index');
-
-// Route to display a specific blog post and its comments
-Route::get('/blog/{id}', [HomeBlog::class, 'detailBlog'])->name('blog.detail');
-// Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
-// Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
-
+// daftar ulang
 Route::get('/daftar_online', [HomeDaftarOnline::class, 'index']);
 Route::post('/daftar_online/send', [HomeDaftarOnline::class, 'send']);
+// akhir daftar ulang
 
 
 Route::get('/pendaftaran-export', [AdminPendaftaran::class, 'export']);
 Route::get('/daftar_online-export', [AdminDaftarOnline::class, 'export']);
 
+
+// pendaftaran
 Route::middleware('check.pendaftar.limit')->group(function () {
 Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
 Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
-
 });
 
 Route::get('/download-kwitansi/{nama}', [HomePendaftaran::class, 'downloadKwitansi']);
+// akhir pendaftaran
+
+ // Rute untuk menghapus semua pendaftaran di admin
+    Route::get('/hapus-semua-pendaftaran', 'App\Http\Controllers\admin\AdminPendaftaran@hapusSemuaPendaftaran')->name('operator.hapus-semua-pendaftaran');
+
 
 Route::get('/about', function () {
     $data = [
@@ -133,6 +143,7 @@ Route::get('/prosedur', function () {
     return view('home.layouts.wrapper',$data);
 });
 
+   
 
 Route::get('/home', function () {
  return redirect();
@@ -147,21 +158,20 @@ Auth::routes();
 Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function(){
      Route::get('beranda', [BerandaOperatorController::class, 'index'])->name('operator.beranda');
 
-    
+
+    // Rute resource untuk pendaftaran
+        Route::resource('/pendaftaran', 'App\Http\Controllers\admin\AdminPendaftaran');
+
     Route::resource('/about', AdminAbout::class);
     Route::resource('/pesan', AdminPesan::class);
     Route::resource('/komen', AdminKomen::class);
 
-    Route::resource('/pendaftaran', AdminPendaftaran::class);
+    // Route::resource('/pendaftaran', AdminPendaftaran::class);
+
     Route::resource('setting', SettingController::class);
 
         Route::resource('/siswa1', AdminSiswa::class);
-
-
-
-
     Route::resource('/daftar_online', AdminDaftarOnline::class);
-
     Route::resource('/banner', AdminBanner::class);
     Route::resource('/informasi', AdminInformasi::class);
     Route::resource('/blog', AdminBlog::class);

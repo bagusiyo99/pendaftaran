@@ -228,6 +228,15 @@ a:focus {
     font-size: 20px;
 }
 
+.text-md-left {
+    text-align: left !important;
+    margin-top: 10px;
+}
+
+.text-md-right {
+    text-align: right !important;
+}
+
 .bg-overlay {
     position: relative;
 }
@@ -610,7 +619,7 @@ a[href^=tel] {
 /* Top Bar
 ================================================== */
 .top-bar {
-    padding: 8px 0;
+    /* padding: 8px 0; */
     background: #ebebeb;
     position: relative;
 }
@@ -618,7 +627,7 @@ a[href^=tel] {
 /* Top info */
 ul.top-info {
     list-style: none;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
 }
 
@@ -655,7 +664,14 @@ ul.top-info li p.info-text {
 @media (max-width: 767px) {
     .top-social ul {
         margin-right: 0;
+        text-align: center;
     }
+
+    ul.top-info li p.info-text {
+        margin-right: 0;
+        text-align: center;
+    }
+
 }
 
 .top-social ul li {

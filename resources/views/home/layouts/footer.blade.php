@@ -211,7 +211,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-   
-                                                                                                                                                                                                                                        MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                                                                                                                                                                                                                                                          MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
 
 
@@ -241,6 +241,7 @@
   <!-- shuffle -->
   <script src="plugins/shuffle/shuffle.min.js" defer></script>
   <script src="/js1/script.js"></script>
+
 
   </body>
 

@@ -70,21 +70,6 @@ namespace App\Models{
 
 namespace App\Models{
 /**
- * App\Models\Biaya
- *
- * @property-read \Illuminate\Database\Eloquent\Collection<int, Biaya> $children
- * @property-read int|null $children_count
- * @property-read \App\Models\User|null $user
- * @method static \Database\Factories\BiayaFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Biaya newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Biaya newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Biaya query()
- */
-	class Biaya extends \Eloquent {}
-}
-
-namespace App\Models{
-/**
  * App\Models\Blog
  *
  * @property int $id
@@ -93,6 +78,8 @@ namespace App\Models{
  * @property string $judul
  * @property string $deskripsi
  * @property string $gambar
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Komen> $komentar
+ * @property-read int|null $komentar_count
  * @method static \Illuminate\Database\Eloquent\Builder|Blog newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Blog newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Blog query()
@@ -238,6 +225,29 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\Komen
+ *
+ * @property int $id
+ * @property int $blog_id
+ * @property string $nama
+ * @property string $isi
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereBlogId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereIsi($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereNama($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereUpdatedAt($value)
+ */
+	class Komen extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Pendaftaran
  *
  * @property int $id
@@ -326,5 +336,16 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  */
 	class User extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\cobaa
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|cobaa newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|cobaa newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|cobaa query()
+ */
+	class cobaa extends \Eloquent {}
 }
 

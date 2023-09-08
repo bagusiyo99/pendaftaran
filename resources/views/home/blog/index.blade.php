@@ -32,8 +32,14 @@
                    </div>
                @endforeach
 
-               <!-- Add pagination links here if needed -->
-               {{-- {{ $blogs->links() }} --}}
+
+
+               <div class="d-flex justify-content-center mt-3">
+                   <!-- Add pagination links here if needed -->
+                   {{ $blogs->links() }}
+               </div>
+
+
            </div>
 
 
@@ -110,7 +116,7 @@
 
                        <form action="#">
 
-                           <a href="/daftar_online" type="submit" class="btn btn-success">Pendaftaran</a>
+                           <a href="/pendaftaran" type="submit" class="btn btn-success">Pendaftaran</a>
                        </form>
 
                    </div>

@@ -137,12 +137,13 @@
 
                 </div>
             </form>
+            {{-- CheckPendaftarLimit agar otomatis tertutup --}}
             <script>
                 function checkPendaftarLimit() {
                     fetch('/api/pendaftar/count')
                         .then(response => response.json())
                         .then(data => {
-                            if (data.count >= 1) {
+                            if (data.count >= 5) {
                                 window.location.href = '/full';
                             }
                         });

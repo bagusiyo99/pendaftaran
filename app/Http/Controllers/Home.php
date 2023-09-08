@@ -14,11 +14,10 @@ use Illuminate\Http\Request;
 
 class Home extends Controller
 {
-    function index (){
+    function index (Request $request){
     $data = [
         // 'about' => About::get(),
-        'about' => About::limit(1)->get(),
-        // 'promo' => Promo::paginate(4),
+        'blog' => Blog::get(),
         'informasi' => Informasi::paginate(4),
         'banner' => Banner::get(),
 
@@ -54,7 +53,6 @@ class Home extends Controller
     ];
     return view('home.layouts.wrapper',$data);
     }
-
 
 
 }

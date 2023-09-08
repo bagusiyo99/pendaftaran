@@ -284,9 +284,9 @@ a {
 /*****************************
     NavBar
 ******************************/
-nav {
+/* nav {
     box-shadow: 0px 0px 15px #9e0c0c44;
-}
+} */
 
 .navbar-dark .navbar-nav .nav-link {
     color: #f9fafb;

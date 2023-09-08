@@ -111,15 +111,15 @@
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('menu') ? 'active' : '' }}"
                                         href="/">Menu</a>
                                 </li>
-                                {{-- 
+
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
-                                        href="/blog">Blog</a>
+                                        href="/blog">Artikel</a>
                                 </li>
 
 
-                                <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
-                                        href="pendaftaran">daftar</a>
-                                </li> --}}
+                                {{-- <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
+                                        href="pendaftaran">Artikel</a>
+                                </li>  --}}
 
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tentang
@@ -128,7 +128,7 @@
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="/about">Sambutan & Sejarah</a></li>
                                         <li><a href="#">Akreditas</a></li>
-                                        <li><a href="/blog">Artikel</a></li>
+                                        {{-- <li><a href="/blog">Artikel</a></li> --}}
                                         <li><a href="/login">Prestasi</a></li>
                                         <li><a href="#">Alumni</a></li>
                                         <li><a href="#">Visi & Misi</a></li>
@@ -189,6 +189,22 @@
                 <!--/ Col end -->
             </div>
             <!--/ Row end -->
+
+
+            {{-- <div class="nav-search">
+                <span id="search"><i class="fa fa-search"></i></span>
+            </div><!-- Search end -->
+
+            <div class="search-block" style="display: none;">
+                <form action="{{ route('search') }}" method="GET"> <!-- Formulir pencarian -->
+                    <label for="search-field" class="w-100 mb-0">
+                        <input type="text" name="keyword" id="q"
+                            placeholder="Type what you want and enter">
+                    </label>
+                    <span class="search-close">&times;</span>
+                    <button type="submit">Cari</button> <!-- Tombol submit untuk memulai pencarian -->
+                </form>
+            </div><!-- Site search end --> --}}
 
 
         </div>

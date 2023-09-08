@@ -11,7 +11,7 @@ class HomeBlog extends Controller
 {
 public function blog()
 {
- $blogs = Blog::get(); // Mengambil 10 blog per halaman
+ $blogs = Blog::latest()->paginate(4); // Mengambil 10 blog per halaman
     $data = [
         'blogs' => $blogs,
         'content' => 'home/blog/index'

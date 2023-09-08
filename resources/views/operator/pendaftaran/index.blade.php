@@ -9,6 +9,12 @@
                         <a href="/pendaftaran-export" class="btn btn-success mb-3"><i class="fa  fa-file-excel"></i>
                             Excel</a>
 
+                        <a href="{{ url('/hapus-semua-pendaftaran') }}" class="btn btn-danger mb-3 mx-3"
+                            onclick="return confirm('Apakah Anda yakin ingin menghapus semua pendaftaran?')">Hapus Semua
+                            Pendaftaran</a>
+
+
+
                         <thead>
                             <tr class="btn-secondary">
                                 <td> No </td>
