@@ -93,6 +93,8 @@
                                         </div>
                                     @enderror
                                 </div>
+
+
                                 <div class="form-group">
                                     <label class="form-label1">Whatsapp</label>
 
@@ -108,6 +110,30 @@
                                         </div>
                                     @enderror
                                 </div>
+
+
+
+                                <div class="form-group">
+                                    <label class="form-label1 ">Jenis
+                                        Kelamin</label>
+                                    <select
+                                        class="form-control wide  @error('jk')
+                                                        is-invalid
+                                                    @enderror"
+                                        name="jk">
+                                        <option disabled selected>Pilih
+                                            Jenis Kelamin </option>
+                                        <option value="Laki-laki">Laki-Laki</option>
+                                        <option value="Perempuan">Perempuan</option>
+                                    </select>
+                                    @error('jk')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                                </div>
+
+
 
 
                                 <div class="form-group">
@@ -143,7 +169,7 @@
                     fetch('/api/pendaftar/count')
                         .then(response => response.json())
                         .then(data => {
-                            if (data.count >= 5) {
+                            if (data.count >= 100) {
                                 window.location.href = '/full';
                             }
                         });

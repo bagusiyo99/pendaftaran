@@ -273,6 +273,13 @@
               </a>
             </li>
 
+            <li class="menu-item {{ \Route::is('about.*') ? 'active' : '' }}">
+              <a href="{{ route('about.index') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-collection"></i>
+                <div data-i18n="Basic">Data Tentang</div>
+              </a>
+            </li>
+            
             <li class="menu-item {{ \Route::is('foto.*') ? 'active' : '' }}">
               <a href="{{ route('foto.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
@@ -309,12 +316,12 @@
               </a>
             </li>
 
-              <li class="menu-item {{ \Route::is('foto.*') ? 'active' : '' }}">
+              {{-- <li class="menu-item {{ \Route::is('foto.*') ? 'active' : '' }}">
               <a href="{{ route('foto.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Data Foto</div>
               </a>
-            </li>
+            </li> --}}
 
             {{-- <li class="menu-item {{ \Route::is('daftar_online.*') ? 'active' : '' }}">
               <a href="{{ route('daftar_online.index') }}" class="menu-link">

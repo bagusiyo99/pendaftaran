@@ -19,7 +19,7 @@
                    <div class="blog-card-group">
                        <div class="blog-card">
                            <div class="blog-card-banner">
-                               <img src="/{{ $blog->gambar }}" width="150" class="blog-banner-img">
+                               <img src="{{ asset($blog->gambar) }}" width="150" class="blog-banner-img">
                            </div>
                            <div class="blog-content-wrapper">
                                <h5 class="blog-tulis ">{{ $blog->created_at->format('d F Y ') }}</h5>

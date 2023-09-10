@@ -8,18 +8,19 @@ use App\Models\Blog;
 use App\Models\Formulir;
 use App\Models\Foto;
 use App\Models\Informasi;
-use App\Models\Promo;
-use App\Models\SiswaBaru;
+use Settings;
+
 use Illuminate\Http\Request;
 
 class Home extends Controller
 {
     function index (Request $request){
     $data = [
-        // 'about' => About::get(),
+        'about' => About::get(),
         'blog' => Blog::get(),
         'informasi' => Informasi::paginate(4),
         'banner' => Banner::get(),
+        
 
 
 

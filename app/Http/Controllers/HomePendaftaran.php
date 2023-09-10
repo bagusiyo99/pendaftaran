@@ -29,43 +29,42 @@ class HomePendaftaran extends Controller
     {
         $data = $request -> validate ([
             'nama' => 'required',
-            'email' => 'required ',
+            'email' => 'required|email|unique:pendaftarans', // Pastikan email unik dalam tabel 'pendaftarans'
             'alamat' => 'required',
-            'telpon' => 'required ',
+            'telpon' => 'required|unique:pendaftarans', // Pastikan nomor HP unik dalam tabel 'pendaftarans'
             'pesan' => 'required ',
+            'jk' => 'required ',
             // 'gambar' => 'required',
         ],
       [
                 'nama.required'=> 'Nama Lengkap WAJIB DIISI',
                 'email.required'=> 'Email WAJIB DIISI',
+                'email.unique' => 'Email Sudah Digunakan',
                 'alamat.required'=> 'Alamat WAJIB DIISI',
                 'pesan.required'=> 'Deskripsi WAJIB DIISI',
-                'gambar.required'=> 'Bulti Pembayaran WAJIB DIISI',
+                'jk.required'=> 'jenis kelamin  WAJIB DIISI',
                 'telpon.required'=> 'No Telpon Atau Whatsaap WAJIB DIISI',
-
+                'telpon.unique' => 'Nomor HP Sudah Digunakan',
             ]);
        
+               // Cek apakah nama pendaftaran sudah ada dalam database
+                // $existingPendaftaran = Pendaftaran::where('email', $data['email'])->first();
 
-        //         // upload gambar
-        // if ($request -> hasFile('gambar')) {
-        //     $gambar = $request->file('gambar');
-        //     $file_name = time ().'-'. $gambar -> getClientOriginalName ();
-
-        //     $storage = 'uploads/pendaftaran/';
-        //     $gambar->move ($storage, $file_name);
-        //     $data ['gambar'] =$storage .$file_name;
-        // }else {
-        //     $data ['gambar'] = null;
-        // }
+                // if ($existingPendaftaran) {
+                //     Alert::error('Gagal', 'Nama Pendaftaran Sudah Ada');
+                //     return redirect('/pendaftaran');
+                // }
 
         // cara manual 
                 // $pendaf = new Pendaftaran();
                 // $pendaf->nama = $request->input('nama');
                 // $pendaf->jenis_kelamin = $request->input('eam');
                 // $pendaf->nomor_telepon = $request->input('alamat');
+
+
             $pendaftaran = Pendaftaran::count('id');
 
-            if ($pendaftaran >= 5) {
+            if ($pendaftaran >= 100) {
                 // return redirect()->back()->with('error', 'Pendaftaran Di tutup.');
                         Alert::error ('Gagal', 'Pendaftaran Gagal');
                         return redirect('/penuh');
@@ -74,7 +73,7 @@ class HomePendaftaran extends Controller
     //     $pdf = PDF::loadView('kwitansi', ['pendaftaran' => $pendaftaran]);
     // return $pdf->download('kwitansi_' . $pendaftaran->id . '.pdf');
         Alert::success('sukses', 'Pendaftaran Sukses');
-return redirect('/sukses')->with('nama', $request->input('nama'));
+        return redirect('/sukses')->with('nama', $request->input('nama'));
         
 
     }

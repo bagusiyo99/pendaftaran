@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->text('nama');
-            $table->text('email');
+            $table->text('email')->unique();
             $table->text('alamat');
             $table->text('jk');
             $table->text('pesan');

@@ -16,14 +16,12 @@ use App\Http\Controllers\admin\AdminFoto;
 use App\Http\Controllers\AdminDaftarOnline;
 use App\Http\Controllers\AdminKomen;
 use App\Http\Controllers\AdminSiswa;
-use App\Http\Controllers\CommentController;
 use App\Http\Controllers\Home;
 use App\Http\Controllers\HomeBlog;
 use App\Http\Controllers\HomeContact;
 use App\Http\Controllers\HomeDaftarOnline;
 use App\Http\Controllers\HomeFoto;
 use App\Http\Controllers\HomePendaftaran;
-use App\Http\Controllers\HomeSiswa;
 use App\Http\Controllers\komenController;
 use App\Http\Controllers\Kwitansi;
 use App\Http\Controllers\PencarianController;
@@ -150,19 +148,27 @@ Route::get('/home', function () {
 });
 
 Auth::routes();
+    // Route::put('/about/update', AdminAbout::class, 'update');
+    // Route::get('/about', AdminAbout::class, 'index');
 
 
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function(){
-     Route::get('beranda', [BerandaOperatorController::class, 'index'])->name('operator.beranda');
+    
+    Route::get('beranda', [BerandaOperatorController::class, 'index'])->name('operator.beranda');
+
+
+        Route::get('/about', [AdminAbout::class, 'index'])->name('about.index');
+        Route::put('/about/update', [AdminAbout::class, 'update']);
 
 
     // Rute resource untuk pendaftaran
         Route::resource('/pendaftaran', 'App\Http\Controllers\admin\AdminPendaftaran');
 
-    Route::resource('/about', AdminAbout::class);
+    // Route::resource('/about', AdminPesan::class);
+
     Route::resource('/pesan', AdminPesan::class);
     Route::resource('/komen', AdminKomen::class);
 
@@ -170,7 +176,7 @@ Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function
 
     Route::resource('setting', SettingController::class);
 
-        Route::resource('/siswa1', AdminSiswa::class);
+    Route::resource('/siswa1', AdminSiswa::class);
     Route::resource('/daftar_online', AdminDaftarOnline::class);
     Route::resource('/banner', AdminBanner::class);
     Route::resource('/informasi', AdminInformasi::class);

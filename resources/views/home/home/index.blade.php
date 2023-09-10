@@ -96,9 +96,10 @@
         <div class="tulis" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
             <h4>Assalamualaikum warahmatullahi wabarakatuh</h4>
             {{-- <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1> --}}
-            <p>{{ settings()->get('desc') }} </p>
+            <p> {{ settings()->get('app_visi') }}</p>
 
         </div>
+
     </div>
 
 </section>
@@ -123,17 +124,16 @@
 
             <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-offset="500"
                 data-aos-easing="ease-in-sine">
-                <h3 class="into-sub-title">Our Values</h3>
+                <h3 class="into-sub-title">Visi dan Misi</h3>
                 <p>Minim Austin 3 wolf moon scenester aesthetic, umami odio pariatur bitters. Pop-up occaecat taxidermy
                     street art, tattooed beard literally.</p>
-
                 <div class="accordion accordion-group" id="our-values-accordion">
                     <div class="card">
                         <div class="card-header p-0 bg-transparent" id="headingOne">
                             <h2 class="mb-0">
                                 <button class="btn btn-block text-left" type="button" data-toggle="collapse"
                                     data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Safety
+                                    Visi
                                 </button>
                             </h2>
                         </div>
@@ -141,8 +141,7 @@
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
                             data-parent="#our-values-accordion">
                             <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf moon officia aute, non cupidata
+                                {{ settings()->get('app_visi') }}
                             </div>
                         </div>
                     </div>
@@ -152,15 +151,14 @@
                                 <button class="btn btn-block text-left collapsed" type="button"
                                     data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
                                     aria-controls="collapseTwo">
-                                    Customer Service
+                                    Misi
                                 </button>
                             </h2>
                         </div>
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                             data-parent="#our-values-accordion">
                             <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad
-                                squid. 3 wolf moon officia aute, non cupidata
+                                {{ settings()->get('desc') }}
                             </div>
                         </div>
                     </div>

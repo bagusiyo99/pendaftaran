@@ -32,8 +32,29 @@
                             {!! Form::textarea('app_phone', settings()->get('app_phone'), [
                                 'class' => 'form-control',
                                 'rows' => 3,
+                                'id' => 'tiny',
                             ]) !!}
                             <span class="text-danger">{{ $errors->first('app_phone') }}</span>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="app_visi">Visi Instansi</label>
+                            {!! Form::textarea('app_visi', settings()->get('app_visi'), [
+                                'class' => 'form-control',
+                                'rows' => 3,
+                                'id' => 'tiny',
+                            ]) !!}
+                            <span class="text-danger">{{ $errors->first('app_visi') }}</span>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="misi">Misi Instansi</label>
+                            {!! Form::textarea('misi', settings()->get('misi'), [
+                                'class' => 'form-control',
+                                'rows' => 3,
+                                'id' => 'tiny',
+                            ]) !!}
+                            <span class="text-danger">{{ $errors->first('misi') }}</span>
                         </div>
 
                         <div class="form-group mt-3">
@@ -49,6 +70,7 @@
                             {!! Form::textarea('desc', settings()->get('desc'), [
                                 'class' => 'form-control',
                                 'rows' => 6,
+                                'id' => 'tiny',
                             ]) !!}
                             <span class="text-danger">{{ $errors->first('desc') }}</span>
                         </div>

@@ -10,7 +10,7 @@ class CheckPendaftarLimit
 {
     public function handle($request, Closure $next)
     {
-        if (Pendaftaran::count() >= 5) {
+        if (Pendaftaran::count() >= 100) {
             return redirect('/full');
         }
 
