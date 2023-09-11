@@ -2,11 +2,17 @@
 
 namespace Database\Seeders;
 
+use App\Models\Banner;
 use App\Models\Blog;
+use App\Models\Foto;
 use App\Models\Informasi;
 use App\Models\Pendaftaran; // Impor model Pendaftaran
+use App\Models\Pesan;
+use Database\Factories\BannerFactory;
 use Database\Factories\BlogFactory;
+use Database\Factories\FotoFactory;
 use Database\Factories\InformasiFactory;
+use Database\Factories\PesanFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -32,6 +38,9 @@ class DatabaseSeeder extends Seeder
         Pendaftaran::class => PendaftaranFactory::class,
         Blog::class => BlogFactory::class,
         Informasi::class => InformasiFactory::class,
+        Pesan::class => PesanFactory::class,
+        Foto::class => FotoFactory::class,
+        Banner::class => BannerFactory::class,
 
     ];
 }

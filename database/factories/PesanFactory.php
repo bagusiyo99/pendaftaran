@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Pesan;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class PesanFactory extends Factory
 {
+    protected $model = Pesan::class;
     /**
      * Define the model's default state.
      *
@@ -17,7 +19,10 @@ class PesanFactory extends Factory
     public function definition()
     {
         return [
-            //
-        ];
+            'nama' => $this->faker->name(),
+            'email' => $this->faker->unique()->safeEmail,
+            'alamat' => $this->faker->address(),
+            'jk' => $this->faker->randomElement(['Laki-laki', 'Perempuan']),
+            'pesan' => $this->faker->paragraph(),        ];
     }
 }

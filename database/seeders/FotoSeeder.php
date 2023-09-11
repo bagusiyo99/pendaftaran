@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
-use App\Models\Blog;
-use Illuminate\Database\Seeder;
+use App\Models\Foto;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
-class BlogSeeder extends Seeder
+class FotoSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +15,6 @@ class BlogSeeder extends Seeder
      */
     public function run()
     {
-        Blog::factory(10)->create();
+        Foto::factory(10)->create();
     }
 }

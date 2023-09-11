@@ -126,6 +126,13 @@ Route::get('/full', function () {
     return view('home.layouts.wrapper',$data);
 });
 
+Route::get('/home', function () {
+    $data = [
+        'content'=> 'home/home/index'
+    ];
+    return view('home.layouts.wrapper',$data);
+});
+
 
 Route::get('/alamat', function () {
     $data = [

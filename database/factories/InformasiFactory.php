@@ -17,7 +17,7 @@ class InformasiFactory extends Factory
         return [
             'judul' => $this->faker->sentence(),
             'deskripsi' => $this->faker->paragraph(),
-            // 'gambar' => 'uploads/informasi/' . time() . '-' . '.jpg',
+            //  'gambar' => fake()->randomElement(['public/images/ba.png']),
         ];
     }
 }

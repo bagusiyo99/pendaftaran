@@ -62,8 +62,12 @@
                             {!! Form::file('gambar', ['class' => 'form-control']) !!}
                             <span class="text-danger">{{ $errors->first('gambar') }}</span>
                             <img src="/{{ settings()->get('gambar') }}" width="300px">
+                            {{-- <img src="{{ \Storage::url(settings()->get('gambar')) }}" width="300px"> --}}
 
                         </div>
+
+                        {!! Form::submit('UPDATE', ['class' => 'btn btn-primary mt-5']) !!}
+
 
                         <div class="form-group mt-3">
                             <label for="desc">Deskripsi Instansi</label>
@@ -86,6 +90,7 @@
                             {!! Form::file('foto', ['class' => 'form-control']) !!}
                             <span class="text-danger">{{ $errors->first('foto') }}</span>
                             <img src="/{{ settings()->get('foto') }}" width="300px">
+                            {{-- <img src="{{ \Storage::url(settings()->get('foto')) }}" width="300px"> --}}
 
                         </div>
 

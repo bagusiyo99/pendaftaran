@@ -131,7 +131,7 @@
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
             <a href="index.html" class="app-brand-link">
-                            <img src="/{{ settings()->get('foto') }}" width="30px">
+                            <img src="/{{ $about->logo }}"  width="30px">
 
               {{-- <span class="app-brand-logo demo">
                 <svg
@@ -188,7 +188,7 @@
                   </g>
                 </svg>
               </span> --}}
-              <span class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">{{ settings()->get('app_name') }}</span>
+              <span class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase"> {!! $about->judul !!} </span>
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -316,12 +316,6 @@
               </a>
             </li>
 
-              {{-- <li class="menu-item {{ \Route::is('foto.*') ? 'active' : '' }}">
-              <a href="{{ route('foto.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Foto</div>
-              </a>
-            </li> --}}
 
             {{-- <li class="menu-item {{ \Route::is('daftar_online.*') ? 'active' : '' }}">
               <a href="{{ route('daftar_online.index') }}" class="menu-link">
@@ -330,12 +324,14 @@
               </a>
             </li> --}}
 
-                        <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
+            <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
               <a href="{{ route('pendaftaran.index') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-collection"></i>
                 <div data-i18n="Basic">Data Pendaftaran Siswa</div>
               </a>
             </li>
+
+            
 
    
 
@@ -343,7 +339,43 @@
               <span class="menu-header-text">Pages</span>
             </li>
 
+            {{-- arsip start --}}
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class='menu-icon bx bx-archive'></i>
+                            <div data-i18n="Layouts">Arsip</div>
+                        </a>
 
+                        <ul class="menu-sub">
+                        <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
+                              <a href="{{ route('pendaftaran.index') }}" class="menu-link">
+                                {{-- <i class="menu-icon tf-icons bx bx-collection"></i> --}}
+                                <div data-i18n="Basic">Data Pendaftaran Siswa</div>
+                              </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="layouts-without-navbar.html" class="menu-link">
+                                    <div data-i18n="Without navbar">Sub 2</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="layouts-container.html" class="menu-link">
+                                    <div data-i18n="Container">Sub 3</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="layouts-fluid.html" class="menu-link">
+                                    <div data-i18n="Fluid">Sub 3</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="layouts-blank.html" class="menu-link">
+                                    <div data-i18n="Blank">Sub 4</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    {{-- arsip end --}}
 
  
 
@@ -603,6 +635,7 @@
  <script>
      tinymce.init({
          selector: 'textarea#tiny'
+
      });
  </script>
 

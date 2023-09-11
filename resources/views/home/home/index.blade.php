@@ -89,20 +89,23 @@
     <h3 class="heading">SAMBUTAN</h3>
 </div>
 
-<section class="info mb-5 mt-5">
-    <div class="main-info">
-        <img src="/{{ settings()->get('gambar') }}" data-aos="fade-right" data-aos-offset="500"
-            data-aos-easing="ease-in-sine">
-        <div class="tulis" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
-            <h4>Assalamualaikum warahmatullahi wabarakatuh</h4>
-            {{-- <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1> --}}
-            <p> {{ settings()->get('app_visi') }}</p>
 
-        </div>
+<section class="info mb-5 mt-5">
+    @foreach ($about as $item)
+        <div class="main-info">
+            <img src="/{{ $item->gambar }}" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
+            <div class="tulis" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
+                <h4>Assalamualaikum warahmatullahi wabarakatuh</h4>
+                {{-- <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1> --}}
+                <p> {!! $item->deskripsi !!}</p>
+    @endforeach
+
+    </div>
 
     </div>
 
 </section>
+
 
 
 <section id="ts-features" class="ts-features mt-5">
@@ -121,51 +124,50 @@
 
 
             </div><!-- Col end -->
-
             <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left" data-aos-offset="500"
                 data-aos-easing="ease-in-sine">
-                <h3 class="into-sub-title">Visi dan Misi</h3>
-                <p>Minim Austin 3 wolf moon scenester aesthetic, umami odio pariatur bitters. Pop-up occaecat taxidermy
-                    street art, tattooed beard literally.</p>
-                <div class="accordion accordion-group" id="our-values-accordion">
-                    <div class="card">
-                        <div class="card-header p-0 bg-transparent" id="headingOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-block text-left" type="button" data-toggle="collapse"
-                                    data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Visi
-                                </button>
-                            </h2>
-                        </div>
+                @foreach ($about as $item)
+                    <h3 class="into-sub-title">Visi dan Misi</h3>
+                    <p>Berikut ini visi dan misi sekolah kami</p>
+                    <div class="accordion accordion-group" id="our-values-accordion">
+                        <div class="card">
+                            <div class="card-header p-0 bg-transparent" id="headingOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-block text-left" type="button" data-toggle="collapse"
+                                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        Visi
+                                    </button>
+                                </h2>
+                            </div>
 
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                            data-parent="#our-values-accordion">
-                            <div class="card-body">
-                                {{ settings()->get('app_visi') }}
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                data-parent="#our-values-accordion">
+                                <div class="card-body">
+                                    {{-- {{ 1settings()->get('app_visi') }} --}} {!! settings()->get('app_visi') !!}
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header p-0 bg-transparent" id="headingTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-block text-left collapsed" type="button"
-                                    data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                    aria-controls="collapseTwo">
-                                    Misi
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                            data-parent="#our-values-accordion">
-                            <div class="card-body">
-                                {{ settings()->get('desc') }}
+                        <div class="card">
+                            <div class="card-header p-0 bg-transparent" id="headingTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-block text-left collapsed" type="button"
+                                        data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                        aria-controls="collapseTwo">
+                                        Misi
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                data-parent="#our-values-accordion">
+                                <div class="card-body">
+                                    {{-- {{ settings()->get('desc') }} --}} {!! settings()->get('misi') !!}
+                                </div>
                             </div>
                         </div>
+
                     </div>
-
-                </div>
-                <!--/ Accordion end -->
-
+                    <!--/ Accordion end -->
+                @endforeach
             </div><!-- Col end -->
         </div><!-- Row end -->
     </div><!-- Container end -->
@@ -360,15 +362,15 @@
     </div>
 
     <div class="row mb-2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="4500">
-        @foreach ($informasi as $item)
+        @foreach ($blog as $item)
             <div class="col-md-6">
                 <div
                     class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                     <div class="col p-4 d-flex flex-column position-static masee">
                         <strong class="d-inline-block mb-2 text-success">Informasi Terbaru</strong>
-                        <h3 class="mb-1">{{ $item->judul }}</h3>
-                        <p class="card-text mb-3">{!! Str::limit($item->deskripsi, 200) !!}</p>
-                        <a clas="info mt-5" href="/informasi/{{ $item->id }}">Lanjutkan Membaca</a>
+                        <h5 class="mb-2"> {!! Str::limit($item->judul, 40) !!}</h5>
+                        <p class="card-text mb-3">{!! Str::limit($item->deskripsi, 130) !!}</p>
+                        <a clas="info mt-5 mb-3" href="/informasi/{{ $item->id }}">Lanjutkan Membaca</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <img class="bd-placeholder-img" width="200" height="250" src="/{{ $item->gambar }}">

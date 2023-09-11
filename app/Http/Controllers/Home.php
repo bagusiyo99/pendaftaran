@@ -14,10 +14,10 @@ use Illuminate\Http\Request;
 
 class Home extends Controller
 {
-    function index (Request $request){
+    function index (){
     $data = [
         'about' => About::get(),
-        'blog' => Blog::get(),
+        'blog' => Blog::paginate(4),
         'informasi' => Informasi::paginate(4),
         'banner' => Banner::get(),
         

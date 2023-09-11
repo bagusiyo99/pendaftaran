@@ -17,12 +17,20 @@ class SettingController extends Controller
         $dataSettings = $request->except('_token');
 
 
-        // if ($request->hasFile('logo')){
+        // if ($request->hasFile('app_logo')){
         //     $request->validate([
-        //         'logo' => 'required|mimes:jpg,png,jpeg|max:5000'
+        //         'app_logo' => 'required|mimes:jpg,png,jpeg|max:5000'
         //     ]);
-        //     $dataSettings['logo'] = $request->file('logo')->store('public');
+        //     $dataSettings['app_logo'] = $request->file('app_logo')->store('public');
         // }
+
+        // if ($request->hasFile('app_gambar')){
+        //     $request->validate([
+        //         'app_gambar' => 'required|mimes:jpg,png,jpeg|max:5000'
+        //     ]);
+        //     $dataSettings['app_gambar'] = $request->file('app_gambar')->store('public');
+        // }
+
 
         // if ($request->hasFile('foto')){
         //     $dataSettings['foto'] = $request->file('foto')->store('public');
@@ -49,6 +57,8 @@ class SettingController extends Controller
             }else {
                 $dataSettings ['gambar'] = null;
             }
+
+            
         settings()->set($dataSettings);
         flash ('Data Berhasil Disimpan');
         return back();

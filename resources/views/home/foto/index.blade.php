@@ -51,7 +51,7 @@
                 </a>
             </div>
             <div class="card-description">
-                <h3>{{ $item->judul }}</h3>
+                <p> {!! Str::limit($item->judul, 25) !!} </p>
                 <p>{!! Str::limit($item->deskripsi, 50) !!}</p>
                 <a href="/show/{{ $item->id }}">Detail</a>
             </div>

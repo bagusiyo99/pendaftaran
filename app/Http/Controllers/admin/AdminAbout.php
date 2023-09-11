@@ -37,41 +37,41 @@ public function update(Request $request)
     $data = $request->validate([
         'judul' => 'required',
         'deskripsi' => 'required',
-        // 'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Contoh validasi gambar
+        'visi' => 'required',
+        'misi' => 'required',
+        'alamat' => 'required',
+        'hp' => 'required',
+        // 'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:10048',
 
     ]);
-
-             // upload file
-        if ($request -> hasFile('logo')) {
-              if($about->logo  != null){
-                unlink($about->logo);
-            }
-
-            $logo = $request->file('logo');
-            $file_name = time ().'-'. $logo -> getClientOriginalName ();
-
-            $storage = 'uploads/about/';
-            $logo->move ($storage, $file_name);
-            $data ['logo'] =$storage .$file_name;
-        }else {
-            $data ['logo'] = null;
+ // Check if a new logo file has been uploaded
+    if ($request->hasFile('logo')) {
+        if ($about->logo != null) {
+            unlink($about->logo);
         }
 
-                // upload gambar
-        if ($request -> hasFile('gambar')) {
-              if($about->gambar  != null){
-                unlink($about->gambar);
-            }
+        $logo = $request->file('logo');
+        $file_name = time() . '-' . $logo->getClientOriginalName();
 
-            $gambar = $request->file('gambar');
-            $file_name = time ().'-'. $gambar -> getClientOriginalName ();
+        $storage = 'uploads/about/';
+        $logo->move($storage, $file_name);
+        $data['logo'] = $storage . $file_name;
+    }
 
-            $storage = 'uploads/about/';
-            $gambar->move ($storage, $file_name);
-            $data ['gambar'] =$storage .$file_name;
-        }else {
-            $data ['gambar'] = null;
+    // Check if a new gambar file has been uploaded
+    if ($request->hasFile('gambar')) {
+        if ($about->gambar != null) {
+            unlink($about->gambar);
         }
+
+        $gambar = $request->file('gambar');
+        $file_name = time() . '-' . $gambar->getClientOriginalName();
+
+        $storage = 'uploads/about/';
+        $gambar->move($storage, $file_name);
+        $data['gambar'] = $storage . $file_name;
+    }
+
 
   
 

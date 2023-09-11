@@ -25,7 +25,7 @@ class HomeContact extends Controller
     {
         $data = $request -> validate ([
             'nama' => 'required',
-            'email' => 'required ',
+            'email' => 'required|email|unique:pesans', // Pastikan email unik dalam tabel 'pesans'
             'alamat' => 'required',
             'jk' => 'required ',
             'pesan' => 'required ',

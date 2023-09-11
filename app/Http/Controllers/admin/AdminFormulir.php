@@ -51,7 +51,13 @@ class AdminFormulir extends Controller
             'judul' => 'required',
             'deskripsi' => 'required ',
             // 'icon' => 'required',
-            'file' => 'required',
+            'file' => 'required|file|mimes:pdf,doc,docx,xls,xlsx|max:5120', // Hanya menerima PDF, Word, dan Excel dengan ukuran maksimal 5 MB (5120 KB)
+          ], [
+        'judul.required' => 'Nama Lengkap WAJIB DIISI',
+        'deskripsi.required' => 'Deskripsi WAJIB DIISI',
+        'file.required' => 'File WAJIB DIISI',
+        'file.mimes' => 'Hanya menerima file PDF, Word, atau Excel',
+        'file.max' => 'Ukuran file tidak boleh lebih dari 5 MB',
         ]);
 
         // upload file
