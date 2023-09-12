@@ -5,13 +5,19 @@ namespace Database\Seeders;
 use App\Models\Banner;
 use App\Models\Blog;
 use App\Models\Foto;
+use App\Models\Guru;
 use App\Models\Informasi;
+use App\Models\Jurusan;
+use App\Models\Kepsek;
 use App\Models\Pendaftaran; // Impor model Pendaftaran
 use App\Models\Pesan;
 use Database\Factories\BannerFactory;
 use Database\Factories\BlogFactory;
 use Database\Factories\FotoFactory;
+use Database\Factories\GuruFactory;
 use Database\Factories\InformasiFactory;
+use Database\Factories\JurusanFactory;
+use Database\Factories\KepsekFactory;
 use Database\Factories\PesanFactory;
 use Illuminate\Database\Seeder;
 
@@ -41,6 +47,9 @@ class DatabaseSeeder extends Seeder
         Pesan::class => PesanFactory::class,
         Foto::class => FotoFactory::class,
         Banner::class => BannerFactory::class,
+        Guru::class => GuruFactory::class,
+        Jurusan::class => JurusanFactory::class,
+        Kepsek::class => KepsekFactory::class,
 
     ];
 }

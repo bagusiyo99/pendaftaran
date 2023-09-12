@@ -13,6 +13,9 @@ use App\Http\Controllers\admin\AdminPendaftaran;
 use App\Http\Controllers\admin\AdminPesan;
 use App\Http\Controllers\admin\AdminFormulir;
 use App\Http\Controllers\admin\AdminFoto;
+use App\Http\Controllers\admin\AdminGuru;
+use App\Http\Controllers\admin\AdminJurusan;
+use App\Http\Controllers\admin\AdminKepsek;
 use App\Http\Controllers\AdminDaftarOnline;
 use App\Http\Controllers\AdminKomen;
 use App\Http\Controllers\AdminSiswa;
@@ -21,6 +24,9 @@ use App\Http\Controllers\HomeBlog;
 use App\Http\Controllers\HomeContact;
 use App\Http\Controllers\HomeDaftarOnline;
 use App\Http\Controllers\HomeFoto;
+use App\Http\Controllers\HomeGuru;
+use App\Http\Controllers\HomeJurusan;
+use App\Http\Controllers\HomeKepsek;
 use App\Http\Controllers\HomePendaftaran;
 use App\Http\Controllers\komenController;
 use App\Http\Controllers\Kwitansi;
@@ -47,6 +53,16 @@ Route::get('/formulir', [Home::class, 'formulir']);
 
 Route::get('/foto', [HomeFoto::class, 'index']);
 Route::get('/show/{id}', [HomeFoto::class,'detail']);
+
+Route::get('/guru', [HomeGuru::class, 'index']);
+Route::get('/show/{id}', [HomeGuru::class,'detail']);
+
+Route::get('/jurusan', [HomeJurusan::class, 'index']);
+Route::get('/show/{id}', [HomeJurusan::class,'detail']);
+
+Route::get('/kepsek', [HomeKepsek::class, 'index']);
+Route::get('/show/{id}', [HomeKepsek::class,'detail']);
+
 
 //  Route::resource('/komen', HomeBlog::class);
 
@@ -174,7 +190,7 @@ Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function
     // Rute resource untuk pendaftaran
         Route::resource('/pendaftaran', 'App\Http\Controllers\admin\AdminPendaftaran');
 
-    // Route::resource('/about', AdminPesan::class);
+    Route::resource('/about', AdminAbout::class);
 
     Route::resource('/pesan', AdminPesan::class);
     Route::resource('/komen', AdminKomen::class);
@@ -190,6 +206,9 @@ Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function
     Route::resource('/blog', AdminBlog::class);
     Route::resource('/formulir', AdminFormulir::class);
     Route::resource('/foto', AdminFoto::class);
+    Route::resource('/guru', AdminGuru::class);
+    Route::resource('/jurusan', AdminJurusan::class);
+    Route::resource('/kepsek', AdminKepsek::class);
 
 });
 

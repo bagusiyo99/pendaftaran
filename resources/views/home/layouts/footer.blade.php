@@ -120,7 +120,7 @@
               <div class="row justify-content-between">
                   <div class="col-lg-4 col-md-6 footer-widget footer-about">
                       <h3 class="widget-title">About Us</h3>
-                      <img loading="lazy" class="footer-logo" src="/{{ settings()->get('foto') }}" alt="Constra">
+                      <img loading="lazy" class="footer-logo" src="/{{ $global_about->logo }}" alt="Projectyai">
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor inci done idunt
                           ut
                           labore et dolore magna aliqua.</p>
@@ -134,7 +134,7 @@
                               <li><a href="https://instagram.com/themefisher" aria-label="Instagram"><i
                                           class="fab fa-instagram"></i></a></li>
                               <li><a href="https://github.com/themefisher" aria-label="Github"><i
-                                          class="fab fa-github"></i></a></li>
+                                          class="fa fa-whatsapp"></i></a></li>
                           </ul>
                       </div><!-- Footer social end -->
                   </div><!-- Col end -->
@@ -198,7 +198,13 @@
                   </div>
               </div><!-- Row end -->
 
-              <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed">
+              <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+              <a href="https://wa.me/62xxxx?text=Assalamu%27alaikum%2C%20perkenalkan%20nama%20saya....." class="float"
+                  target="_blank">
+                  <i class="fa fa-whatsapp my-float "></i>
+              </a>
+
+              <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed mt-5">
                   <button class="btn btn-primary" title="Back to Top">
                       <i class="fa fa-angle-double-up"></i>
                   </button>
@@ -211,7 +217,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-   
-                                                                                                                                                                                                                                                            MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                                                                                                                                                                                                                                                                                    MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
 
 

@@ -29,7 +29,7 @@
                             <span class="social-icon"><i class="fab fa-instagram"></i></span>
                         </a>
                         <a title="Linkdin" href="https://github.com/themefisher.com">
-                            <span class="social-icon"><i class="fab fa-github"></i></span>
+                            <span class="social-icon"><i class=" fa fa-whatsapp"></i></span>
                         </a>
                     </li>
                 </ul>
@@ -116,6 +116,9 @@
                                         href="/blog">Artikel</a>
                                 </li>
 
+                                <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
+                                        href="/jurusan">Jurusan</a>
+                                </li>
 
                                 {{-- <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
                                         href="pendaftaran">Artikel</a>
@@ -132,6 +135,9 @@
                                         <li><a href="/login">Prestasi</a></li>
                                         <li><a href="#">Alumni</a></li>
                                         <li><a href="#">Visi & Misi</a></li>
+                                        <li><a href="/guru">Guru</a></li>
+                                        <li><a href="/kepsek">Pimpinan</a></li>
+
                                         <li class="dropdown-submenu">
                                             <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Jurusan
                                             </a>
@@ -143,6 +149,8 @@
                                         </li>
                                     </ul>
                                 </li>
+
+
 
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Galeri

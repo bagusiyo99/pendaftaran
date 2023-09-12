@@ -44,6 +44,8 @@ public function update(Request $request)
         // 'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:10048',
 
     ]);
+
+    
  // Check if a new logo file has been uploaded
     if ($request->hasFile('logo')) {
         if ($about->logo != null) {
