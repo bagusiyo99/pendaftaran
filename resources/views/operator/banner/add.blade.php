@@ -38,7 +38,7 @@
 
                     <div class="form-group mt-3">
                         <label for="">Gambar</label>
-                        <input type="file" name="gambar"
+                        <input type="file" name="gambar" accept="image/png, image/jpg, image/jpeg"
                             class="form-control 
                             @error('gambar')
                             is-invalid

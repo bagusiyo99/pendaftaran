@@ -59,6 +59,7 @@ Route::get('/show/{id}', [HomeGuru::class,'detail']);
 
 Route::get('/jurusan', [HomeJurusan::class, 'index']);
 Route::get('/show/{id}', [HomeJurusan::class,'detail']);
+Route::get('/jurusan/{id}', [HomeJurusan::class, 'detail'])->name('jurusan.detail');
 
 Route::get('/kepsek', [HomeKepsek::class, 'index']);
 Route::get('/show/{id}', [HomeKepsek::class,'detail']);

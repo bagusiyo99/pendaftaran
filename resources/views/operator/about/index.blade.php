@@ -8,6 +8,10 @@
                         @method('PUT')
 
                         @csrf
+                        <div class="alert alert-danger mb-5" role="alert">
+                            Gambar Hanya max 5mb
+                        </div>
+
                         <div class="form-group">
                             <label for="">Nama Insitusi</label>
                             <input type="text" name="judul"
@@ -33,29 +37,6 @@
                             @enderror
                         </div>
 
-
-
-                        <div class="form-group mt-3">
-                            <label for="">Misi Insitusi</label>
-                            <textarea id="tiny" name="misi"class="form-control" cols="30" rows="10">{{ isset($about) ? $about->misi : old('misi') }} </textarea>
-                            @error('misi')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
-
-                        <div class="form-group mt-3">
-                            <label for="">Visi Insitusi</label>
-                            <textarea id="tiny" name="visi"class="form-control" cols="30" rows="10">{{ isset($about) ? $about->visi : old('visi') }} </textarea>
-                            @error('visi')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
-
-
                         <div class="form-group mt-3">
                             <label for="">Nomor Telpon insitusi</label>
                             <input type="text" name="hp"
@@ -72,9 +53,7 @@
                         </div>
 
                         <div class="form-group mt-3">
-                            <div class="alert alert-danger" role="alert">
-                                Logo Hanya 5mb
-                            </div>
+
                             <label for="">Logo insitusi</label>
 
                             <input type="file" name="logo"
@@ -106,6 +85,43 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
+
+                    <div class="form-group mt-3">
+                        <label for="">Misi Insitusi</label>
+                        <textarea id="textya" name="misi"class="form-control" cols="30" rows="10">{{ isset($about) ? $about->misi : old('misi') }} </textarea>
+                        @error('misi')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="">Visi Insitusi</label>
+                        <textarea id="tiny" name="visi"class="form-control" cols="30" rows="10">{{ isset($about) ? $about->visi : old('visi') }} </textarea>
+                        @error('visi')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-5">Update</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+
+                    <div class="alert alert-danger mb-5" role="alert">
+                        Gambar Hanya max 5mb
+                    </div>
+
                     <div class="form-group mt-3">
                         <label for="">Kepala Sekolah</label>
                         <input type="file" name="gambar"

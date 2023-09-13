@@ -25,7 +25,7 @@
                                <h5 class="blog-tulis ">{{ $blog->created_at->format('d F Y ') }}</h5>
                                <p class="jdl15"> {!! Str::limit($blog->judul, 100) !!} </p>
                                <p class="blog-text">
-                                   {!! Str::limit($blog->deskripsi, 100) !!}</p>
+                                   {!! Str::limit($blog->deskripsi, 160) !!}</p>
                                <a href="/blog/{{ $blog->id }}" class="blog-topic text-tiny">Detail</a>
                            </div>
                        </div>

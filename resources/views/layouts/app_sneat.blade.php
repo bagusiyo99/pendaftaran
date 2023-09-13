@@ -51,6 +51,14 @@
     {{-- fontawesome --}}
     <link rel="stylesheet" href="/assets/font/css/all.min.css" />
 
+    <!-- Bootstrap 5 CDN Link -->
+
+    <!-- Summernote CSS - CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <!-- //Summernote CSS - CDN Link -->
+
+
     <!-- Helpers -->
     <script src="/assets/vendor/js/helpers.js"></script>
 
@@ -171,6 +179,13 @@
                         </a>
                     </li>
 
+                    <li class="menu-item {{ \Route::is('about.*') ? 'active' : '' }}">
+                        <a href="{{ route('about.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Setting Home</div>
+                        </a>
+                    </li>
+
                     {{-- user.* (* mencangkup semua ) --}}
                     {{-- <!-- Layouts -->
             <li class="menu-item">
@@ -225,7 +240,7 @@
                     <li class="menu-item {{ \Route::is('guru.*') ? 'active' : '' }}">
                         <a href="{{ route('guru.index') }}" class="menu-link">
                             <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data guru</div>
+                            <div data-i18n="Basic">Data Guru</div>
                         </a>
                     </li>
 
@@ -237,12 +252,7 @@
                         </a>
                     </li>
 
-                    <li class="menu-item {{ \Route::is('about.*') ? 'active' : '' }}">
-                        <a href="{{ route('about.index') }}" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Data Tentang</div>
-                        </a>
-                    </li>
+
 
                     <li class="menu-item {{ \Route::is('foto.*') ? 'active' : '' }}">
                         <a href="{{ route('foto.index') }}" class="menu-link">
@@ -600,6 +610,17 @@
     <link rel="stylesheet" href="/assets/select/select2.min.css">
     <script src="/assets/select/select2.min.js"></script>
 
+
+
+    <!-- Summernote JS - CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#textya").summernote();
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+    <!-- //Summernote JS - CDN Link -->
 
 
     <script>

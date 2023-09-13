@@ -114,7 +114,7 @@
   </footer>
   <!-- Footer --> --}}
 
-  <footer id="footer" class="footer bg-overlay">
+  <footer id="footer" class="footer bg-overlay mt-5">
       <div class="footer-main">
           <div class="container">
               <div class="row justify-content-between">
@@ -204,12 +204,18 @@
                   <i class="fa fa-whatsapp my-float "></i>
               </a>
 
-              <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed mt-5">
+              {{-- <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed mt-5">
+                  <button class="btn btn-primary" title="Back to Top">
+                      <i class="fa fa-angle-double-up"></i>
+                  </button>
+              </div> --}}
+
+              <div id="back-to-top" data-spy="affix" data-offset-top="10" class="back-to-top position-fixed"
+                  style="display: block;">
                   <button class="btn btn-primary" title="Back to Top">
                       <i class="fa fa-angle-double-up"></i>
                   </button>
               </div>
-
           </div><!-- Container end -->
       </div><!-- Copyright end -->
   </footer><!-- Footer end -->
@@ -217,7 +223,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-   
-                                                                                                                                                                                                                                                                                    MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+                                                                                                                                                                                                                                                                                        MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"></script>
 
 

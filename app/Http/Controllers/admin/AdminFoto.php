@@ -18,7 +18,7 @@ class AdminFoto extends Controller
     public function index()
     {
         $data =[
-            'title' => 'Manajemen Foto',
+            'title' => 'Manajemen Infromasi',
             'foto' => Foto::get(),
             'content' => 'operator/foto/index'
         ];
@@ -33,7 +33,7 @@ class AdminFoto extends Controller
     public function create()
     {
         $data =[
-            'title' => 'Tambah Foto',
+            'title' => 'Tambah Infromasi',
             'content' => 'operator/foto/add'
         ];
         
@@ -98,7 +98,7 @@ class AdminFoto extends Controller
     public function edit($id)
     {
         $data =[
-            'title' => 'Edit Foto',
+            'title' => 'Edit Infromasi',
             'foto' => Foto::find ($id),
             'content' => 'operator/foto/add'
         ];
@@ -116,16 +116,16 @@ class AdminFoto extends Controller
     {   
         $foto = Foto::find($id);
          $data = $request -> validate ([
-            'judul' => 'required|max:50',
+            'judul' => 'required',
             'deskripsi' => 'required ',
 
         ]);
 
         // upload gambar
         if ($request -> hasFile('gambar')) {
-            if($foto->gambar  != null){
-                unlink($foto->gambar);
-            }
+            // if($foto->gambar  != null){
+            //     unlink($foto->gambar);
+            // }
 
 
             $gambar = $request->file('gambar');
@@ -154,9 +154,9 @@ class AdminFoto extends Controller
     {
         $foto = Foto::find ($id);
 
-            if($foto->gambar != null){
-            unlink($foto->gambar);
-                }
+            // if($foto->gambar != null){
+            // unlink($foto->gambar);
+            //     }
 
         Alert::success('sukses', 'data berhasil dihapus');
         $foto->delete();
@@ -164,3 +164,4 @@ class AdminFoto extends Controller
         
     }
 }
+

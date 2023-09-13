@@ -478,21 +478,22 @@ a {
 }
 
 .card-jurusan {
-    width: 280px;
+    width: 450px;
     background-color: #f0f0f0;
     border-radius: 15px;
+    border-color: #1F8A70;
     box-shadow: 0 2px 4px #1F8A70;
-    margin: 15px;
+    margin: 25px;
     transition: all 0.3s;
 }
 
 .card-image {
-    width: 100%;
+    width: 450px;
     height: 250px;
 }
 
 .card-image img {
-    width: 100%;
+    width: 450px;
     max-width: 100%;
     height: 250px;
     object-fit: cover;
@@ -503,7 +504,7 @@ a {
 
 .card-description {
     width: 100%;
-    height: auto;
+    height: 210px;
     background-color: #ffffff;
     border-radius: 0 0 15px 15px;
     padding: 25px;
@@ -529,8 +530,8 @@ a {
     text-decoration: none;
     text-transform: uppercase;
     background-color: #243763;
-    font-size: 12px;
-    padding: 6px;
+    font-size: 15px;
+    padding: 6px 25px;
     border-radius: 3px;
 }
 
@@ -891,6 +892,14 @@ a {
         margin-right: 40px;
     }
 
+    .card-description p {
+        padding-left: 15px;
+    }
+
+    .card-description a {
+        margin-left: 15px;
+
+    }
 
     /* fitru */
     .fitur {
@@ -912,6 +921,15 @@ a {
     @media screen and (max-width :360px) {
         .fitur {
             padding: 0 80px;
+        }
+
+        .card-description p {
+            padding-left: 30px;
+        }
+
+        .card-description a {
+            margin-left: 30px;
+
         }
     }
 
@@ -1018,6 +1036,15 @@ a {
 
 .my-float {
     margin-top: 10px;
+}
+
+@media (max-width: 517px) {
+    .float {
+        width: 152px;
+        height: 42px;
+        right: 20px;
+
+    }
 }
 
 .page-item.active .page-link {
