@@ -45,24 +45,24 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', [Home::class, 'index']);
-Route::get('/detail/{id}', [Home::class, 'detail']);
+Route::get('/detail/{id}', [Home::class, 'detail'])->name('home.detail');
 Route::get('/informasi/{id}', [Home::class, 'informasi']);
 
 
 Route::get('/formulir', [Home::class, 'formulir']);
 
 Route::get('/foto', [HomeFoto::class, 'index']);
-Route::get('/show/{id}', [HomeFoto::class,'detail']);
+Route::get('/galeri/{id}', [HomeFoto::class,'detail'])->name('foto.detail');
 
 Route::get('/guru', [HomeGuru::class, 'index']);
-Route::get('/show/{id}', [HomeGuru::class,'detail']);
+Route::get('/detail/{id}', [HomeGuru::class,'detail'])->name('guru.detail');
 
 Route::get('/jurusan', [HomeJurusan::class, 'index']);
-Route::get('/show/{id}', [HomeJurusan::class,'detail']);
+// Route::get('/show/{id}', [HomeJurusan::class,'detail']);
 Route::get('/jurusan/{id}', [HomeJurusan::class, 'detail'])->name('jurusan.detail');
 
 Route::get('/kepsek', [HomeKepsek::class, 'index']);
-Route::get('/show/{id}', [HomeKepsek::class,'detail']);
+Route::get('/show/{id}', [HomeKepsek::class,'detail'])->name('kepsek.detail');
 
 
 //  Route::resource('/komen', HomeBlog::class);
@@ -103,15 +103,15 @@ Route::get('/daftar_online-export', [AdminDaftarOnline::class, 'export']);
 
 // pendaftaran
 Route::middleware('check.pendaftar.limit')->group(function () {
-Route::get('/pendaftaran', [HomePendaftaran::class, 'index']);
-Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send']);
+Route::get('/pendaftaran', [HomePendaftaran::class, 'index'])->name('pendaftaran.index');
+Route::post('/pendaftaran/send', [HomePendaftaran::class, 'send'])->name('pendaftaran.send');
 });
 
-Route::get('/download-kwitansi/{nama}', [HomePendaftaran::class, 'downloadKwitansi']);
+Route::get('/download-kwitansi/{nama}', [HomePendaftaran::class, 'downloadKwitansi'])->name('pendaftaran.downloadKwitansi');
 // akhir pendaftaran
 
  // Rute untuk menghapus semua pendaftaran di admin
-    Route::get('/hapus-semua-pendaftaran', 'App\Http\Controllers\admin\AdminPendaftaran@hapusSemuaPendaftaran')->name('operator.hapus-semua-pendaftaran');
+    Route::get('/hapus-semua-pendaftaran', [AdminPendaftaran::class, 'hapusSemuaPendaftaran'])->name('operator.hapus-semua-pendaftaran');
 
 
 Route::get('/about', function () {
@@ -189,14 +189,14 @@ Route::prefix('operator')->middleware(['auth', 'auth.operator'])->group(function
 
 
     // Rute resource untuk pendaftaran
-        Route::resource('/pendaftaran', 'App\Http\Controllers\admin\AdminPendaftaran');
+    // Route::resource('/pendaftaran', 'App\Http\Controllers\admin\AdminPendaftaran');
 
     Route::resource('/about', AdminAbout::class);
 
     Route::resource('/pesan', AdminPesan::class);
     Route::resource('/komen', AdminKomen::class);
 
-    // Route::resource('/pendaftaran', AdminPendaftaran::class);
+    Route::resource('/pendaftaran', AdminPendaftaran::class);
 
     Route::resource('setting', SettingController::class);
 

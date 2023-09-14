@@ -85,31 +85,28 @@
 </section>
 
 
-<div class="main mb-5">
+<div class="main mb-5 ">
     <h3 class="heading">SAMBUTAN</h3>
 </div>
 
 
-<section class="info mb-5 mt-5">
+<section class="info ">
     @foreach ($about as $item)
-        <div class="main-info">
+        <div class="main-info mt-5">
             <img src="/{{ $item->gambar }}" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
             <div class="tulis" data-aos="fade-left" data-aos-offset="500" data-aos-easing="ease-in-sine">
-                <h4>Assalamualaikum warahmatullahi wabarakatuh</h4>
+                <h3>Assalamualaikum warahmatullahi wabarakatuh</h3>
                 {{-- <h1>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h1> --}}
                 <p> {!! $item->deskripsi !!}</p>
     @endforeach
 
-    </div>
-
-    </div>
 
 </section>
 
 
 
-<section id="ts-features" class="ts-features mt-5">
-    <div class="container">
+<section id="ts-features" class="ts-features ">
+    <div class="container mt-5 ">
         <div class="row">
             <div class="col-lg-6">
                 <div class="ts-intro" data-aos="fade-right" data-aos-offset="500" data-aos-easing="ease-in-sine">
@@ -370,7 +367,7 @@
                         <strong class="d-inline-block mb-2 text-success">Informasi Terbaru</strong>
                         <h5 class="mb-2"> {!! Str::limit($item->judul, 40) !!}</h5>
                         <p class="card-text mb-3">{!! Str::limit($item->deskripsi, 130) !!}</p>
-                        <a clas="info mt-5 mb-3" href="/informasi/{{ $item->id }}">Lanjutkan Membaca</a>
+                        <a clas="info mt-5 mb-3" href="/blog/{{ $item->id }}">Lanjutkan Membaca</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <img class="bd-placeholder-img" width="200" height="250" src="/{{ $item->gambar }}">

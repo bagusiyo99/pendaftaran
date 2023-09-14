@@ -22,7 +22,7 @@ class HomeFoto extends Controller
     {
     $data = [
         'foto' => Foto::find($id),
-        'content'=> 'home/foto/show'
+        'content'=> 'home/foto/galeri'
     ];
     return view('home.layouts.wrapper',$data);
     }

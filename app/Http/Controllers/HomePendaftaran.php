@@ -88,13 +88,12 @@ public function downloadKwitansi($nama)
     $pendaftaran = Pendaftaran::where('nama', $namax)->first();
 
 
-      $pdf = PDF::loadView('home.pendaftaran.kwitansi', compact('pendaftaran'));
+    $pdf = PDF::loadView('home.pendaftaran.kwitansi', compact('pendaftaran'));
 
-  $pdfPath = storage_path('app/public/kwitansi_' . $pendaftaran->namax . '.pdf');
-  $pdf->save($pdfPath);
+    $pdfPath = storage_path('app/public/kwitansi_' . $pendaftaran->namax . '.pdf');
+    $pdf->save($pdfPath);
 
- $downloadFileName = 'kwitansi_' . $pendaftaran->namax . '.pdf';
-// return view('home.pendaftaran.kwitansi');
+    $downloadFileName = 'kwitansi_' . $pendaftaran->namax . '.pdf';
     return response()->download($pdfPath, $downloadFileName)->deleteFileAfterSend(true);
 }
 

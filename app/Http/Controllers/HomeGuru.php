@@ -36,9 +36,11 @@ class HomeGuru extends Controller
 
         function detail ($id)
     {
+        
+
     $data = [
         'guru' => Guru::find($id),
-        'content'=> 'home/guru/show'
+        'content'=> 'home/guru/detail'
     ];
     return view('home.layouts.wrapper',$data);
     }

@@ -26,7 +26,7 @@ class HomeJurusan extends Controller
     {
     $data = [
         'jurusan' => Jurusan::find($id),
-        'content'=> 'home/jurusan/show'
+        'content'=> 'home/jurusan/detail'
     ];
     return view('home.layouts.wrapper',$data);
     }

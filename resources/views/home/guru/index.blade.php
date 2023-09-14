@@ -17,7 +17,7 @@
             <div class="card-description">
                 <p> {!! Str::limit($item->judul, 25) !!} </p>
                 <p>{!! Str::limit($item->deskripsi, 50) !!}</p>
-                <a href="/show/{{ $item->id }}">Detail</a>
+                <a href="/detail/{{ $item->id }}">Detail</a>
             </div>
         </div>
     @endforeach

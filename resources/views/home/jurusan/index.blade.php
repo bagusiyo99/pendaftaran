@@ -130,7 +130,7 @@
                             </div>
 
                             <div class="post-footer mb-4">
-                                <a href="/show/{{ $item->id }}" class="btn btn-primary">Continue Reading</a>
+                                <a href="/jurusan/{{ $item->id }}" class="btn btn-primary">Continue Reading</a>
                             </div>
 
                         </div><!-- post-body end -->

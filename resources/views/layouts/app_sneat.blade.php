@@ -51,7 +51,6 @@
     {{-- fontawesome --}}
     <link rel="stylesheet" href="/assets/font/css/all.min.css" />
 
-    <!-- Bootstrap 5 CDN Link -->
 
     <!-- Summernote CSS - CDN Link -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">

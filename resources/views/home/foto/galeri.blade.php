@@ -48,13 +48,13 @@
             <div class="col-xl-12 col-lg-12">
                 <div class="content-inner-page">
 
-                    <h2 class="column-title mrt-0 text-center">{{ $kepsek->judul }}</h2>
+                    <h2 class="column-title mrt-0 text-center">{{ $foto->judul }}</h2>
 
                     <div class="gap-40"></div>
 
                     <div id="page-slider" class="page-slider">
                         <div class="item">
-                            <img src="/{{ $kepsek->gambar }}" class="mx-auto d-block " width="550px" height="400px">
+                            <img src="/{{ $foto->gambar }}" class="mx-auto d-block " width="550px" height="400px">
 
                         </div>
 
@@ -63,7 +63,7 @@
 
                     <div class="row">
                         <div class="col-md-12 mt-5">
-                            <p>{!! $kepsek->deskripsi !!}
+                            <p>{!! $foto->deskripsi !!}
                             </p>
                         </div><!-- col end -->
                     </div><!-- 1st row end-->
