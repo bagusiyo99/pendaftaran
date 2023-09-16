@@ -113,7 +113,7 @@
                                 </li>
 
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
-                                        href="/blog">Artikel</a>
+                                        href="/blog" id="search">Artikel</a>
                                 </li>
 
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
@@ -133,7 +133,7 @@
                                         <li><a href="#">Akreditas</a></li>
                                         {{-- <li><a href="/blog">Artikel</a></li> --}}
                                         <li><a href="/login">Prestasi</a></li>
-                                        <li><a href="#">Alumni</a></li>
+                                        <li><a href="/daftar_online">Alumni</a></li>
                                         <li><a href="#">Visi & Misi</a></li>
                                         <li><a href="/guru">Guru</a></li>
                                         <li><a href="/kepsek">Pimpinan</a></li>
@@ -161,6 +161,14 @@
                                     </ul>
                                 </li>
 
+                                {{-- <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">daftara
+                                        <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/daftar_online">Foto</a></li>
+                                        <li><a href="projects-single.html">daftar</a></li>
+                                    </ul>
+                                </li> --}}
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle"
                                         data-toggle="dropdown">Pendaftaran <i class="fa fa-angle-down"></i></a>
@@ -198,21 +206,21 @@
             </div>
             <!--/ Row end -->
 
-
-            {{-- <div class="nav-search">
-                <span id="search"><i class="fa fa-search"></i></span>
+            <div class="nav-search">
+                <span id="search" class="search-icon"><i class="fa fa-search"></i></span>
             </div><!-- Search end -->
 
             <div class="search-block" style="display: none;">
-                <form action="{{ route('search') }}" method="GET"> <!-- Formulir pencarian -->
-                    <label for="search-field" class="w-100 mb-0">
-                        <input type="text" name="keyword" id="q"
-                            placeholder="Type what you want and enter">
+                <form action="{{ route('blog.search') }}" method="GET">
+                    <label for="q" class="w-100 mb-0">
+                        <input type="text" name="query" id="q" placeholder="Pencarian...">
+
                     </label>
                     <span class="search-close">&times;</span>
                     <button type="submit">Cari</button> <!-- Tombol submit untuk memulai pencarian -->
                 </form>
-            </div><!-- Site search end --> --}}
+            </div><!-- Site search end -->
+
 
 
         </div>

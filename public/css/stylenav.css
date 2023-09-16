@@ -1181,7 +1181,7 @@ ul.navbar-nav>li>a {
 }
 
 .search-block {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: #ffb600;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: none;
     padding: 10px;
@@ -1199,8 +1199,13 @@ ul.navbar-nav>li>a {
     }
 }
 
+.search-icon {
+    color: white;
+    font-size: 25px;
+}
+
 .search-block .form-control {
-    background-color: #222;
+    background-color: #ffb600;
     border: none;
     color: #fff;
     width: 100%;
@@ -1215,7 +1220,7 @@ ul.navbar-nav>li>a {
     right: -4px;
     font-size: 32px;
     cursor: pointer;
-    background: #23282d;
+    background: #ffb600;
     padding: 5px;
 }
 
@@ -2253,6 +2258,23 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
     filter: grayscale(100%);
     -webkit-filter: gray;
     filter: gray;
+}
+
+.sosmed li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    /* Sesuaikan dengan jarak yang Anda inginkan */
+}
+
+.column-title-small {
+    margin-right: 20px;
+}
+
+.sosialikon {
+    font-size: 36px;
+    color: #198754;
+    /* Sesuaikan ukuran ikon sesuai kebutuhan */
 }
 
 /* Testimonial

@@ -53,8 +53,7 @@
                 <div class="content-inner-page">
 
                     <h2 class="column-title mrt-0 text-center">{{ $guru->judul }}</h2>
-
-                    <div class="gap-40"></div>
+                    <h4 class="column-title mrt-0 text-center">{{ $guru->mapel }}</h4>
 
                     <div id="page-slider" class="page-slider">
                         <div class="item">
@@ -65,121 +64,50 @@
                     </div><!-- Page slider end -->
 
 
-                    <div class="row">
-                        <div class="col-md-12 mt-5">
-                            <p>{!! $guru->deskripsi !!}
-                            </p>
-                        </div><!-- col end -->
-                    </div><!-- 1st row end-->
+
 
 
 
                     <div class="gap-40"></div>
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <h3 class="column-title-small">What Makes Us Different</h3>
-
-                            <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson
-                                ad
-                                squid. 3 wolf
-                                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt
-                                laborum eiusmod.
-                                Consectetur adipiscing elit. Integer adipiscing erat eget risus sollicitudin
-                                pellentesque et non erat
-                                tincidunt nunc posuere.</p>
-                            <ul class="list-arrow">
+                    <div class="row mt-5">
+                        <div class="col-md-8">
+                            <h3 class="column-title-small">Biodata </h3>
+                            <p>{!! $guru->deskripsi !!}</p>
+                            {{-- <ul class="list-arrow">
                                 <li>Partnership Strategy tristique eleifend.</li>
                                 <li>Opporutnity to work with amet elit a.</li>
                                 <li>Saving Time to Deal with commodo iaculis.</li>
                                 <li>Leadership skills to manage erat volutpat.</li>
                                 <li>Cut cost without sacrificing dolore magna.</li>
                                 <li>Automate your business elis tristique.</li>
-                            </ul>
+                            </ul> --}}
                         </div>
 
-                        <div class="col-md-6 mt-5 mt-md-0">
-                            <h3 class="column-title-small">You Should Know</h3>
-
-                            <div class="accordion accordion-group accordion-classic" id="construction-accordion">
-                                <div class="card">
-                                    <div class="card-header p-0 bg-transparent" id="headingOne">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-block text-left" type="button"
-                                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                                                aria-controls="collapseOne">
-                                                Does the law require head protection on construction sites?
-                                            </button>
-                                        </h2>
-                                    </div>
-
-                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                        data-parent="#construction-accordion">
-                                        <div class="card-body">
-                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
-                                            terry
-                                            richardson ad squid. 3
-                                            wolf
-                                            moon officia aute, non cupidata
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header p-0 bg-transparent" id="headingTwo">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-block text-left collapsed" type="button"
-                                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                                                aria-controls="collapseTwo">
-                                                What are the first aid requirements for sites?
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                        data-parent="#construction-accordion">
-                                        <div class="card-body">
-                                            Anemi nim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                            aliquip
-                                            ex ea com modo
-                                            consequat.
-                                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-                                            dolore
-                                            eu fugiat nulla
-                                            pariatur.
-                                            Excepteur sint occaecat cupid henderit in voluptate velit esse cillu
-                                            oris
-                                            nisi ut aliquip ex ea
-                                            com
-                                            matat.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card">
-                                    <div class="card-header p-0 bg-transparent" id="headingThree">
-                                        <h2 class="mb-0">
-                                            <button class="btn btn-block text-left collapsed" type="button"
-                                                data-toggle="collapse" data-target="#collapseThree"
-                                                aria-expanded="false" aria-controls="collapseThree">
-                                                What is an appointed person?
-                                            </button>
-                                        </h2>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                        data-parent="#construction-accordion">
-                                        <div class="card-body">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                                            industry.
-                                            Lorem Ipsum has been
-                                            the
-                                            industry’s standard dummy text ever since the 1500s, when an unknown
-                                            printer
-                                            took a galley of type
-                                            and
-                                            scrambled it to make a type specimen book.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--/ Accordion end -->
+                        <div class="col-md-4 mt-5 mt-md-0">
+                            <h3 class="column-title-small ">Berikut Sosial Media Guru</h3>
+                            <ul class="sosmed">
+                                <li>
+                                    <a title="Facebook " href="#">
+                                        <span class="sosialikon"><i class="fab fa-facebook-f"></i></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Twitter " href="#">
+                                        <span class="sosialikon"><i class="fab fa-twitter"></i></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="Instagram" href="#">
+                                        <span class="sosialikon"><i class="fab fa-instagram"></i></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a title="tiktok" href="#">
+                                        <span class="sosialikon"><i class="fab fa-tiktok"></i></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                     <!--2nd row end -->

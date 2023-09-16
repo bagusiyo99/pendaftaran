@@ -54,4 +54,20 @@ public function index()
 
     return view('home.layouts.wrapper', $data);
 }
+
+public function search(Request $request)
+{
+    $query = $request->input('query');
+    $blogs = Blog::where('judul', 'like', "%$query%")
+                 ->orWhere('deskripsi', 'like', "%$query%")
+                 ->paginate(10);
+
+    $data = [
+        'blogs' => $blogs,
+        'content' => 'home/blog/index', // Ganti dengan tampilan beranda Anda yang sesuai
+    ];
+
+    return view('home.layouts.wrapper', $data);
+}
+
 }

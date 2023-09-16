@@ -17,7 +17,12 @@ return new class extends Migration
             $table->id();
             $table->text('judul');
             $table->text('deskripsi');
+            $table->text('mapel');
             $table->text('gambar');
+            $table->string('facebook')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('tiktok')->nullable();
             $table->timestamps();
         });
     }

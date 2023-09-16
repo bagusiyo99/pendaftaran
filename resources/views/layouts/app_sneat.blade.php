@@ -291,11 +291,11 @@
 
 
                     {{-- <li class="menu-item {{ \Route::is('daftar_online.*') ? 'active' : '' }}">
-              <a href="{{ route('daftar_online.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Pendaftaran Siswa</div>
-              </a>
-            </li> --}}
+                        <a href="{{ route('daftar_online.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Pendaftaran Siswa</div>
+                        </a>
+                    </li> --}}
 
                     <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
                         <a href="{{ route('pendaftaran.index') }}" class="menu-link">

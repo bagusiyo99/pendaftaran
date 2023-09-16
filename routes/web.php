@@ -71,8 +71,8 @@ Route::get('/show/{id}', [HomeKepsek::class,'detail'])->name('kepsek.detail');
 // Route::get('/blogs/search', [PencarianController::class, 'search'])->name('blog.search');
 
 
-// Route::get('/daftar', [HomeDaftar::class, 'index']);
-// Route::post('/daftar/send', [HomeDaftar::class, 'send']);
+Route::get('/daftar', [HomeDaftar::class, 'index']);
+Route::post('/daftar/send', [HomeDaftar::class, 'send']);
 
 Route::get('/contact', [HomeContact::class, 'index']);
 Route::post('/contact/send', [HomeContact::class, 'send']);
@@ -85,9 +85,10 @@ Route::get('/blog', [HomeBlog::class, 'blog'])->name('blog.index');
 Route::get('/blog/{id}', [HomeBlog::class, 'detailBlog'])->name('blog.detail');
 // Rute untuk menampilkan formulir input komentar
 Route::get('/komentar', [KomenController::class, 'comen'])->name('komentar.comen');
+Route::get('/search', 'HomeBlog@search')->name('blog.search');
 
 // Rute untuk menyimpan komentar
-Route::post('/komentar/send', [KomenController::class, 'send'])->name('komentar.send');
+Route::post('/komentar/send', [KomenController::class, 'send'])->name('komentar.send')->middleware('web');
 // akhir komentar blog atau artikel
 
 
@@ -95,6 +96,9 @@ Route::post('/komentar/send', [KomenController::class, 'send'])->name('komentar.
 Route::get('/daftar_online', [HomeDaftarOnline::class, 'index']);
 Route::post('/daftar_online/send', [HomeDaftarOnline::class, 'send']);
 // akhir daftar ulang
+
+
+
 
 
 Route::get('/pendaftaran-export', [AdminPendaftaran::class, 'export']);

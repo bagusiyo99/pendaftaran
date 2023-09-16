@@ -118,7 +118,12 @@ class AdminFoto extends Controller
          $data = $request -> validate ([
             'judul' => 'required',
             'deskripsi' => 'required ',
-
+            ], [
+        'judul.required' => 'Nama Lengkap WAJIB DIISI',
+        'deskripsi.required' => 'Deskripsi WAJIB DIISI',
+        'gambar.required' => 'gambar WAJIB DIISI',
+        'gambar.mimes' => 'Hanya menerima gambar PDF, Word, atau Excel',
+        'gambar.max' => 'Ukuran gambar tidak boleh lebih dari 5 MB',
         ]);
 
         // upload gambar

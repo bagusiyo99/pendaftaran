@@ -3,43 +3,42 @@
    </div>
    <div class="main-blog mt-5">
 
+
+
+
+
        <div class="container1 mt-5">
-           <div class="blog-berita" data-aos="fade-right" data-aos-offset="700" data-aos-easing="ease-in-sine">
-               <h2 class="h2">Kegiatan</h2>
-               @foreach ($blogs as $blog)
-                   {{-- <div class="blog-card-group">
-                       <div class="blog-card">
-                           <!-- Display blog post details here -->
-                           <h5 class="blog-tulis">{{ $blog->created_at->format('d F Y') }}</h5>
-                           <img src="/{{ $blog->gambar }}" width="150" class="blog-banner-img">
-                           <p class="blog-text">{!! Str::limit($blog->deskripsi, 300) !!}</p>
-                           <a href="/blog/{{ $blog->id }}" class="blog-topic text-tiny">Detail</a>
-                       </div>
-                   </div> --}}
-                   <div class="blog-card-group">
-                       <div class="blog-card">
-                           <div class="blog-card-banner">
-                               <img src="{{ asset($blog->gambar) }}" width="150" class="blog-banner-img">
-                           </div>
-                           <div class="blog-content-wrapper">
-                               <h5 class="blog-tulis ">{{ $blog->created_at->format('d F Y ') }}</h5>
-                               <p class="jdl15"> {!! Str::limit($blog->judul, 100) !!} </p>
-                               <p class="blog-text">
-                                   {!! Str::limit($blog->deskripsi, 160) !!}</p>
-                               <a href="/blog/{{ $blog->id }}" class="blog-topic text-tiny">Detail</a>
+           <div class="blog-berita">
+               <h2 class="h2">Artikel Kami</h2>
+
+               @if ($blogs->count() > 0)
+                   @foreach ($blogs as $blog)
+                       <div class="blog-card-group">
+                           <div class="blog-card">
+                               <div class="blog-card-banner">
+                                   @if ($blog->gambar)
+                                       <img src="{{ asset($blog->gambar) }}" width="150" class="blog-banner-img">
+                                   @endif
+                               </div>
+                               <div class="blog-content-wrapper">
+                                   <h5 class="blog-tulis">{{ $blog->created_at->format('d F Y ') }}</h5>
+                                   <p class="jdl15">{!! Str::limit($blog->judul, 100) !!}</p>
+                                   <p class="blog-text">{!! Str::limit($blog->deskripsi, 160) !!}</p>
+                                   <a href="/blog/{{ $blog->id }}" class="blog-topic text-tiny">Detail</a>
+                               </div>
                            </div>
                        </div>
+                   @endforeach
+                   <div class="d-flex justify-content-center mt-3">
+                       <!-- Add pagination links here if needed -->
+                       {{ $blogs->links() }}
                    </div>
-               @endforeach
-
-
-
-               <div class="d-flex justify-content-center mt-3">
-                   <!-- Add pagination links here if needed -->
-                   {{ $blogs->links() }}
-               </div>
-
-
+               @else
+                   <h2>Hasil Pencarian</h2>
+                   <div class="alert alert-danger" role="alert">
+                       Tidak ada hasil pencarian yang ditemukan.
+                   </div>
+               @endif
            </div>
 
 

@@ -19,6 +19,9 @@ class GuruFactory extends Factory
         return [
             'judul' => $this->faker->name(),
             'deskripsi' => $this->faker->paragraph(),
+            // 'mapel' => $this->faker->jobTitle(),
+            'mapel' => $this->faker->randomElement(['Matematika', 'Bahasa Inggris', 'Sejarah', 'Fisika']),
+
                 ];
     }
 }

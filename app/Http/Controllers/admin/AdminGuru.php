@@ -51,14 +51,24 @@ class AdminGuru extends Controller
     {
         $data = $request -> validate ([
             'judul' => 'required',
+            'mapel' => 'required ',
             'deskripsi' => 'required ',
             'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:5048',
+            'facebook' => 'nullable|url',
+            'twitter' => 'nullable|url',
+            'instagram' => 'nullable|url',
+            'tiktok' => 'nullable|url',
             ], [
         'judul.required' => 'Nama Lengkap WAJIB DIISI',
         'deskripsi.required' => 'Deskripsi WAJIB DIISI',
+        'mapel.required' => ' WAJIB DIISI',
         'gambar.required' => 'gambar WAJIB DIISI',
         'gambar.mimes' => 'Hanya menerima gambar PDF, Word, atau Excel',
         'gambar.max' => 'Ukuran gambar tidak boleh lebih dari 5 MB',
+        'tiktok' => 'Hanya Boleh Memakai URL',
+        'instagram' => 'Hanya Boleh Memakai URL',
+        'facebook' => 'Hanya Boleh Memakai URL',
+        'twitter' => 'Hanya Boleh Memakai URL',
         ]);
 
         // upload gambar
@@ -119,7 +129,20 @@ class AdminGuru extends Controller
          $data = $request -> validate ([
             'judul' => 'required|max:150',
             'deskripsi' => 'required ',
-
+            'facebook' => 'nullable|url',
+            'twitter' => 'nullable|url',
+            'instagram' => 'nullable|url',
+            'tiktok' => 'nullable|url',
+            ], [
+        'judul.required' => 'Nama Lengkap WAJIB DIISI',
+        'deskripsi.required' => 'Deskripsi WAJIB DIISI',
+        'gambar.required' => 'gambar WAJIB DIISI',
+        'gambar.mimes' => 'Hanya menerima gambar PDF, Word, atau Excel',
+        'gambar.max' => 'Ukuran gambar tidak boleh lebih dari 5 MB',
+        'tiktok' => 'Hanya Boleh Memakai URL',
+        'instagram' => 'Hanya Boleh Memakai URL',
+        'facebook' => 'Hanya Boleh Memakai URL',
+        'twitter' => 'Hanya Boleh Memakai URL',
         ]);
 
         // upload gambar
