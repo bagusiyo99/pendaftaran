@@ -1,4 +1,4 @@
-# Website SPP Sekolah
+# Pendaftara Sekolah
 Website Yang memberikan Informasi Tentang Pembayaran SPP Sekolah
 
 installasi:
