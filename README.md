@@ -23,7 +23,7 @@ ini merupakan fitur pendafataran di home, saya telah melimit 500 pendaftar, jika
 !
 !
 
-ini tampilan jika pendaftaran ditutup
+ini tampilan jika pendaftaran telah mencapai 500 pendaftar, maka akan otomatis tampilan seperti ini
 ![dafatrar ](https://github.com/bagusiyo99/pendaftaran/assets/73180981/995b3002-99d6-4d8e-ba8c-3132afd72293)
 
 
