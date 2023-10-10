@@ -1,6 +1,6 @@
 ini merupakan salah satu fitur di admin
 
-![admin](https://github.com/bagusiyo99/pendaftaran/assets/73180981/bf06ea37-2ce4-4624-a5d9-7cc2c852ad34)
+![admin](https://github.com/bagusiyo99/pendaftaran/assets/73180981/d866af60-b63a-411b-bfd2-b5a7ffe82b9c)
 !
 !
 !
@@ -8,7 +8,7 @@ ini merupakan salah satu fitur di admin
 
 ini merupakan salah satu fitur di home.
 
-![artikel](https://github.com/bagusiyo99/pendaftaran/assets/73180981/4a16f53f-469b-4b31-8d30-e59f975eb00f)
+![artikel](https://github.com/bagusiyo99/pendaftaran/assets/73180981/cbf93442-56da-4c7e-a1a2-71ba3b2919fb)
 !
 !
 !
@@ -17,14 +17,14 @@ ini merupakan salah satu fitur di home.
 
 ini merupakan fitur pendafataran di home, saya telah melimit 500 pendaftar, jika terisi semua akan berubah menjadi tampilan di bawah ini
 
-![daftar](https://github.com/bagusiyo99/pendaftaran/assets/73180981/fb3207cc-e24a-4fbc-8687-52d1bdf30fa3)
+![daftar](https://github.com/bagusiyo99/pendaftaran/assets/73180981/fa83d0e7-be60-434b-97f4-e203f0cf9309)
 !
 !
 !
 !
 
 ini tampilan jika pendaftaran telah mencapai 500 pendaftar, maka akan otomatis tampilan seperti ini
-![dafatrar ](https://github.com/bagusiyo99/pendaftaran/assets/73180981/995b3002-99d6-4d8e-ba8c-3132afd72293)
+![dafatrar ](https://github.com/bagusiyo99/pendaftaran/assets/73180981/2b1f7794-16cc-4200-b022-04bda999371b)
 
 
 
