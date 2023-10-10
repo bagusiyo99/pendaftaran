@@ -1,8 +1,11 @@
-![admin](https://github.com/bagusiyo99/pendaftaran/assets/73180981/bf06ea37-2ce4-4624-a5d9-7cc2c852ad34)
 ini merupakan salah satu fitur di admin
+![admin](https://github.com/bagusiyo99/pendaftaran/assets/73180981/bf06ea37-2ce4-4624-a5d9-7cc2c852ad34)
+
+
 
 ![artikel](https://github.com/bagusiyo99/pendaftaran/assets/73180981/4a16f53f-469b-4b31-8d30-e59f975eb00f)
 ini merupakan salah satu fitur di home
+
 
 
 ![daftar](https://github.com/bagusiyo99/pendaftaran/assets/73180981/fb3207cc-e24a-4fbc-8687-52d1bdf30fa3)
