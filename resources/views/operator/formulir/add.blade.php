@@ -29,7 +29,7 @@
 
                     <div class="form-group mt-3">
                         <label for="">Deskripsi</label>
-                        <textarea id="summernote" name="deskripsi"class="form-control" cols="30" rows="10">{{ isset($formulir) ? $formulir->deskripsi : old('deskripsi') }} </textarea>
+                        <textarea id="textya" name="deskripsi"class="form-control" cols="30" rows="10">{{ isset($formulir) ? $formulir->deskripsi : old('deskripsi') }} </textarea>
                         @error('deskripsi')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -39,7 +39,7 @@
 
                     <div class="form-group mt-3">
                         <label for="">File</label>
-                        <input type="file" name="file"
+                        <input type="file" name="file" accept=".doc,.docx,.pdf,.zip,"
                             class="form-control 
                             @error('file')
                             is-invalid

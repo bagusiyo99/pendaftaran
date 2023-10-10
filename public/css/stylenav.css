@@ -143,8 +143,11 @@ a.read-more:hover {
 }
 
 
+
+
 .ts-features {
-    padding: 70px 0;
+    margin-top: 184px;
+    padding: 50px 0;
     position: relative;
     background-color: #198754;
     color: white;
@@ -226,6 +229,15 @@ a:focus {
 .register-left p {
     text-align: left;
     font-size: 20px;
+}
+
+.text-md-left {
+    text-align: left !important;
+    margin-top: 10px;
+}
+
+.text-md-right {
+    text-align: right !important;
 }
 
 .bg-overlay {
@@ -610,7 +622,7 @@ a[href^=tel] {
 /* Top Bar
 ================================================== */
 .top-bar {
-    padding: 8px 0;
+    /* padding: 8px 0; */
     background: #ebebeb;
     position: relative;
 }
@@ -618,7 +630,7 @@ a[href^=tel] {
 /* Top info */
 ul.top-info {
     list-style: none;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
 }
 
@@ -655,7 +667,14 @@ ul.top-info li p.info-text {
 @media (max-width: 767px) {
     .top-social ul {
         margin-right: 0;
+        text-align: center;
     }
+
+    ul.top-info li p.info-text {
+        margin-right: 0;
+        text-align: center;
+    }
+
 }
 
 .top-social ul li {
@@ -1162,7 +1181,7 @@ ul.navbar-nav>li>a {
 }
 
 .search-block {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: #ffb600;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: none;
     padding: 10px;
@@ -1180,8 +1199,13 @@ ul.navbar-nav>li>a {
     }
 }
 
+.search-icon {
+    color: white;
+    font-size: 25px;
+}
+
 .search-block .form-control {
-    background-color: #222;
+    background-color: #ffb600;
     border: none;
     color: #fff;
     width: 100%;
@@ -1196,7 +1220,7 @@ ul.navbar-nav>li>a {
     right: -4px;
     font-size: 32px;
     cursor: pointer;
-    background: #23282d;
+    background: #ffb600;
     padding: 5px;
 }
 
@@ -2236,6 +2260,23 @@ ul.navbar-nav>li.header-get-a-quote:hover>a:after {
     filter: gray;
 }
 
+.sosmed li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    /* Sesuaikan dengan jarak yang Anda inginkan */
+}
+
+.column-title-small {
+    margin-right: 20px;
+}
+
+.sosialikon {
+    font-size: 36px;
+    color: #198754;
+    /* Sesuaikan ukuran ikon sesuai kebutuhan */
+}
+
 /* Testimonial
 ================================================== */
 .testimonial-area {
@@ -2505,7 +2546,7 @@ img.testimonial-thumb {
 /* Footer about us */
 .footer-logo {
     /* margin-bottom: 25px; */
-    width: 210px;
+    width: 160px;
     /* max-height: 35px; */
 }
 

@@ -17,9 +17,10 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->text('nama');
-            $table->text('email');
+            $table->text('email')->unique();
             $table->text('alamat');
-            $table->text('telpon');
+            $table->string('telpon', 13)->unique(); // Batasan panjang 13 digit
+            $table->string('jk'); // Kolom "jenis kelamin" dengan tipe data string
             $table->text('gambar');
             $table->text('pesan');
         });

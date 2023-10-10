@@ -20,7 +20,7 @@ class AdminDaftarOnline extends Controller
     {
         $data =[
             'title' => 'Manajemen DaftarOnline',
-            'daftar_online' => DaftarOnline::limit(1)->get(),
+            'daftar_online' => DaftarOnline::get(),
             'content' => 'admin/daftar_online/index'
         ];
         return view ('operator.daftar_online.index', $data );

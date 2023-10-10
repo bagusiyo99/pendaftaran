@@ -19,16 +19,26 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string $judul
  * @property string $deskripsi
+ * @property string $visi
+ * @property string $misi
+ * @property string $alamat
+ * @property string $hp
+ * @property string $logo
  * @property string $gambar
  * @method static \Illuminate\Database\Eloquent\Builder|About newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|About newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|About query()
+ * @method static \Illuminate\Database\Eloquent\Builder|About whereAlamat($value)
  * @method static \Illuminate\Database\Eloquent\Builder|About whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|About whereDeskripsi($value)
  * @method static \Illuminate\Database\Eloquent\Builder|About whereGambar($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|About whereHp($value)
  * @method static \Illuminate\Database\Eloquent\Builder|About whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|About whereJudul($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|About whereLogo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|About whereMisi($value)
  * @method static \Illuminate\Database\Eloquent\Builder|About whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|About whereVisi($value)
  */
 	class About extends \Eloquent {}
 }
@@ -37,7 +47,6 @@ namespace App\Models{
 /**
  * App\Models\Bank
  *
- * @method static \Database\Factories\BankFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Bank newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Bank newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Bank query()
@@ -55,6 +64,7 @@ namespace App\Models{
  * @property string $judul
  * @property string $deskripsi
  * @property string $gambar
+ * @method static \Database\Factories\BannerFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Banner newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Banner newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Banner query()
@@ -70,21 +80,6 @@ namespace App\Models{
 
 namespace App\Models{
 /**
- * App\Models\Biaya
- *
- * @property-read \Illuminate\Database\Eloquent\Collection<int, Biaya> $children
- * @property-read int|null $children_count
- * @property-read \App\Models\User|null $user
- * @method static \Database\Factories\BiayaFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Biaya newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Biaya newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Biaya query()
- */
-	class Biaya extends \Eloquent {}
-}
-
-namespace App\Models{
-/**
  * App\Models\Blog
  *
  * @property int $id
@@ -93,6 +88,9 @@ namespace App\Models{
  * @property string $judul
  * @property string $deskripsi
  * @property string $gambar
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Komen> $komentar
+ * @property-read int|null $komentar_count
+ * @method static \Database\Factories\BlogFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Blog newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Blog newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Blog query()
@@ -200,6 +198,7 @@ namespace App\Models{
  * @property string $judul
  * @property string $deskripsi
  * @property string $gambar
+ * @method static \Database\Factories\FotoFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Foto newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Foto newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Foto query()
@@ -215,6 +214,30 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\Guru
+ *
+ * @property int $id
+ * @property string $judul
+ * @property string $deskripsi
+ * @property string $gambar
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\GuruFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Guru newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Guru newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Guru query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Guru whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Guru whereDeskripsi($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Guru whereGambar($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Guru whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Guru whereJudul($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Guru whereUpdatedAt($value)
+ */
+	class Guru extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Informasi
  *
  * @property int $id
@@ -223,6 +246,7 @@ namespace App\Models{
  * @property string $judul
  * @property string $deskripsi
  * @property string $gambar
+ * @method static \Database\Factories\InformasiFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Informasi newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Informasi newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Informasi query()
@@ -238,6 +262,77 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * App\Models\Jurusan
+ *
+ * @property int $id
+ * @property string $judul
+ * @property string $deskripsi
+ * @property string $gambar
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\JurusanFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Jurusan newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Jurusan newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Jurusan query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Jurusan whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Jurusan whereDeskripsi($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Jurusan whereGambar($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Jurusan whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Jurusan whereJudul($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Jurusan whereUpdatedAt($value)
+ */
+	class Jurusan extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Kepsek
+ *
+ * @property int $id
+ * @property string $judul
+ * @property string $deskripsi
+ * @property string $gambar
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Database\Factories\KepsekFactory factory($count = null, $state = [])
+ * @method static \Illuminate\Database\Eloquent\Builder|Kepsek newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Kepsek newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Kepsek query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Kepsek whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Kepsek whereDeskripsi($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Kepsek whereGambar($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Kepsek whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Kepsek whereJudul($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Kepsek whereUpdatedAt($value)
+ */
+	class Kepsek extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Komen
+ *
+ * @property int $id
+ * @property int $blog_id
+ * @property string $nama
+ * @property string $isi
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereBlogId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereIsi($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereNama($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Komen whereUpdatedAt($value)
+ */
+	class Komen extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Pendaftaran
  *
  * @property int $id
@@ -247,8 +342,10 @@ namespace App\Models{
  * @property string $email
  * @property string $alamat
  * @property string $telpon
+ * @property string $jk
  * @property string $gambar
  * @property string $pesan
+ * @method static \Database\Factories\PendaftaranFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran query()
@@ -257,6 +354,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran whereGambar($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran whereJk($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran whereNama($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran wherePesan($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Pendaftaran whereTelpon($value)
@@ -277,6 +375,7 @@ namespace App\Models{
  * @property string $alamat
  * @property string $jk
  * @property string $pesan
+ * @method static \Database\Factories\PesanFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Pesan newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Pesan newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Pesan query()
@@ -326,5 +425,16 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
  */
 	class User extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\cobaa
+ *
+ * @method static \Illuminate\Database\Eloquent\Builder|cobaa newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|cobaa newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|cobaa query()
+ */
+	class cobaa extends \Eloquent {}
 }
 

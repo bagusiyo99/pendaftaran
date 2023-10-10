@@ -460,7 +460,7 @@
                                     </div>
 
 
-                                    <div class="col-lg-4">
+                                    {{-- <div class="col-lg-4">
                                         <div class="mb-3 mb-4">
                                             <label class="form-label">KTP Dan KK</label>
                                             <div class="input-group">
@@ -481,7 +481,31 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div> --}}
+
+                                    <div class="col-lg-4">
+                                        <div class="mb-3 mb-4">
+                                            <label class="form-label">Vidio</label>
+                                            <div class="input-group">
+                                                <div class="form-file">
+                                                    <input type="file" accept="video/*"
+                                                        class="form-file-input form-control" name="file"
+                                                        class="form-control                             
+                                                    @error('file')
+                                                        is-invalid
+                                                    @enderror"
+                                                        value="{{ isset($daftar_online) ? $daftar_online->file : old('file') }}">
+                                                    @error('file')
+                                                        <div class="invalid-feedback">
+                                                            {{ $message }}
+                                                        </div>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
+
 
                                 <div class="row">
                                     <div class="col-lg-3">

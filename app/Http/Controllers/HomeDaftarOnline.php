@@ -46,7 +46,8 @@ class HomeDaftarOnline extends Controller
             'nohp_ayah' => 'required|max:13 ',
             'nohp_ibu' => 'required|max:13',
             'penghasilan_ayah' => 'required ',
-            'file' => 'required ',
+            // 'file' => 'required ',
+            'file' => 'required|file|mimetypes:video/mp4|max:5048', // Memperluas jenis file yang diizinkan untuk gambar dan video
             'penghasilan_ibu' => 'required ',
 
         ],
@@ -75,6 +76,8 @@ class HomeDaftarOnline extends Controller
                 'file.required'=> 'Tidak Boleh Kosong',
                 'penghasilan_ibu.required'=> 'Tidak Boleh Kosong',
                 'berkas.required'=> 'Tidak Boleh Kosong',
+                  'file.mimetypes' => 'video (MP4)',
+                'file.max' => 'Ukuran file tidak boleh lebih dari 5 MB',
             ]);
 
 
@@ -114,9 +117,6 @@ class HomeDaftarOnline extends Controller
             $data ['file'] = null;
         }
 
-        if (DaftarOnline::max(1)) {
-            
-        }
 
         DaftarOnline::create($data);
         Alert::success('sukses', 'Pesan berhasil dikirim');

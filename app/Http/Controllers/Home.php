@@ -8,19 +8,19 @@ use App\Models\Blog;
 use App\Models\Formulir;
 use App\Models\Foto;
 use App\Models\Informasi;
-use App\Models\Promo;
-use App\Models\SiswaBaru;
+use Settings;
+
 use Illuminate\Http\Request;
 
 class Home extends Controller
 {
     function index (){
     $data = [
-        // 'about' => About::get(),
-        'about' => About::limit(1)->get(),
-        // 'promo' => Promo::paginate(4),
+        'about' => About::get(),
+        'blog' => Blog::paginate(4),
         'informasi' => Informasi::paginate(4),
         'banner' => Banner::get(),
+        
 
 
 
@@ -54,7 +54,6 @@ class Home extends Controller
     ];
     return view('home.layouts.wrapper',$data);
     }
-
 
 
 }

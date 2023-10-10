@@ -16,8 +16,13 @@ return new class extends Migration
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text('judul');
+            $table->string('judul');
             $table->text('deskripsi');
+            $table->text('visi');
+            $table->text('misi');
+            $table->text('alamat');
+            $table->string('hp', 13)->unique(); // Batasan panjang 13 digit
+            $table->text('logo');
             $table->text('gambar');
         });
     }

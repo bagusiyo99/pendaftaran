@@ -18,7 +18,7 @@ class AdminFoto extends Controller
     public function index()
     {
         $data =[
-            'title' => 'Manajemen Foto',
+            'title' => 'Manajemen Infromasi',
             'foto' => Foto::get(),
             'content' => 'operator/foto/index'
         ];
@@ -33,7 +33,7 @@ class AdminFoto extends Controller
     public function create()
     {
         $data =[
-            'title' => 'Tambah Foto',
+            'title' => 'Tambah Infromasi',
             'content' => 'operator/foto/add'
         ];
         
@@ -51,7 +51,13 @@ class AdminFoto extends Controller
         $data = $request -> validate ([
             'judul' => 'required',
             'deskripsi' => 'required ',
-            'gambar' => 'required',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:5048',
+            ], [
+        'judul.required' => 'Nama Lengkap WAJIB DIISI',
+        'deskripsi.required' => 'Deskripsi WAJIB DIISI',
+        'gambar.required' => 'gambar WAJIB DIISI',
+        'gambar.mimes' => 'Hanya menerima gambar PDF, Word, atau Excel',
+        'gambar.max' => 'Ukuran gambar tidak boleh lebih dari 5 MB',
         ]);
 
         // upload gambar
@@ -92,7 +98,7 @@ class AdminFoto extends Controller
     public function edit($id)
     {
         $data =[
-            'title' => 'Edit Foto',
+            'title' => 'Edit Infromasi',
             'foto' => Foto::find ($id),
             'content' => 'operator/foto/add'
         ];
@@ -110,16 +116,21 @@ class AdminFoto extends Controller
     {   
         $foto = Foto::find($id);
          $data = $request -> validate ([
-            'judul' => 'required|max:50',
+            'judul' => 'required',
             'deskripsi' => 'required ',
-
+            ], [
+        'judul.required' => 'Nama Lengkap WAJIB DIISI',
+        'deskripsi.required' => 'Deskripsi WAJIB DIISI',
+        'gambar.required' => 'gambar WAJIB DIISI',
+        'gambar.mimes' => 'Hanya menerima gambar PDF, Word, atau Excel',
+        'gambar.max' => 'Ukuran gambar tidak boleh lebih dari 5 MB',
         ]);
 
         // upload gambar
         if ($request -> hasFile('gambar')) {
-            if($foto->gambar  != null){
-                unlink($foto->gambar);
-            }
+            // if($foto->gambar  != null){
+            //     unlink($foto->gambar);
+            // }
 
 
             $gambar = $request->file('gambar');
@@ -148,9 +159,9 @@ class AdminFoto extends Controller
     {
         $foto = Foto::find ($id);
 
-            if($foto->gambar != null){
-            unlink($foto->gambar);
-                }
+            // if($foto->gambar != null){
+            // unlink($foto->gambar);
+            //     }
 
         Alert::success('sukses', 'data berhasil dihapus');
         $foto->delete();
@@ -158,3 +169,4 @@ class AdminFoto extends Controller
         
     }
 }
+

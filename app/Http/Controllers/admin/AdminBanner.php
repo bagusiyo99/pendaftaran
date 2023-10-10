@@ -52,7 +52,7 @@ class AdminBanner extends Controller
         $data = $request -> validate ([
             'judul' => 'required',
             'deskripsi' => 'required ',
-            'gambar' => 'required',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:5048',
         ]);
 
         // upload gambar

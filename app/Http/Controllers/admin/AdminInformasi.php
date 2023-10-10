@@ -51,7 +51,13 @@ class AdminInformasi extends Controller
         $data = $request -> validate ([
             'judul' => 'required',
             'deskripsi' => 'required ',
-            'gambar' => 'required',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:5048',
+            ], [
+        'judul.required' => 'Nama Lengkap WAJIB DIISI',
+        'deskripsi.required' => 'Deskripsi WAJIB DIISI',
+        'gambar.required' => 'gambar WAJIB DIISI',
+        'gambar.mimes' => 'Hanya menerima gambar PDF, Word, atau Excel',
+        'gambar.max' => 'Ukuran gambar tidak boleh lebih dari 5 MB',
         ]);
 
         // upload gambar
@@ -112,7 +118,13 @@ class AdminInformasi extends Controller
          $data = $request -> validate ([
             'judul' => 'required',
             'deskripsi' => 'required ',
-
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:5048',
+            ], [
+        'judul.required' => 'Nama Lengkap WAJIB DIISI',
+        'deskripsi.required' => 'Deskripsi WAJIB DIISI',
+        'gambar.required' => 'gambar WAJIB DIISI',
+        'gambar.mimes' => 'Hanya menerima gambar PDF, Word, atau Excel',
+        'gambar.max' => 'Ukuran gambar tidak boleh lebih dari 5 MB',
         ]);
 
         // upload gambar

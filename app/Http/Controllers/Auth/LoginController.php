@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Auth;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use Auth;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
@@ -69,5 +70,13 @@ class LoginController extends Controller
             return redirect()->route('login');
         }
         
+    }
+
+     protected function sendFailedLoginResponse(Request $request)
+    {
+        throw ValidationException::withMessages([
+            $this->username() => [trans('auth.failed')],
+            'login' => ['Anda tidak memiliki akses'], // Add a custom error message for 'login'
+        ]);
     }
 }

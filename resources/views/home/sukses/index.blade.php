@@ -42,7 +42,8 @@
                         be! How much you can love! What you can accomplish! And what your potential is.</p>
                 </blockquote>
                 <p>Silahkan download kwitansi pendaftaran dibawah ini. </p>
-                <a class="btn-primary" href="/download-kwitansi/{{ session('nama') }}" target="_blank">Unduh
+                <a class="btn-primary" href="/download-kwitansi/{{ session('nama') }}" target="_blank"><i
+                        class="fa-sharp fa-solid fa-circle-down"></i> Unduh
                     Kwitansi</a>
 
             </div><!-- Col end -->

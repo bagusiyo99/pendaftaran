@@ -29,7 +29,7 @@
                             <span class="social-icon"><i class="fab fa-instagram"></i></span>
                         </a>
                         <a title="Linkdin" href="https://github.com/themefisher.com">
-                            <span class="social-icon"><i class="fab fa-github"></i></span>
+                            <span class="social-icon"><i class=" fa fa-whatsapp"></i></span>
                         </a>
                     </li>
                 </ul>
@@ -111,15 +111,18 @@
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('menu') ? 'active' : '' }}"
                                         href="/">Menu</a>
                                 </li>
-                                {{-- 
+
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
-                                        href="/blog">Blog</a>
+                                        href="/blog" id="search">Artikel</a>
                                 </li>
 
-
                                 <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
-                                        href="pendaftaran">daftar</a>
-                                </li> --}}
+                                        href="/jurusan">Jurusan</a>
+                                </li>
+
+                                {{-- <li class="nav-item"> <a class="nav-link  {{ Request::is('blog') ? 'active' : '' }}"
+                                        href="pendaftaran">Artikel</a>
+                                </li>  --}}
 
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tentang
@@ -128,10 +131,13 @@
                                     <ul class="dropdown-menu" role="menu">
                                         <li><a href="/about">Sambutan & Sejarah</a></li>
                                         <li><a href="#">Akreditas</a></li>
-                                        <li><a href="/blog">Artikel</a></li>
+                                        {{-- <li><a href="/blog">Artikel</a></li> --}}
                                         <li><a href="/login">Prestasi</a></li>
-                                        <li><a href="#">Alumni</a></li>
+                                        <li><a href="/daftar_online">Alumni</a></li>
                                         <li><a href="#">Visi & Misi</a></li>
+                                        <li><a href="/guru">Guru</a></li>
+                                        <li><a href="/kepsek">Pimpinan</a></li>
+
                                         <li class="dropdown-submenu">
                                             <a href="#!" class="dropdown-toggle" data-toggle="dropdown">Jurusan
                                             </a>
@@ -144,6 +150,8 @@
                                     </ul>
                                 </li>
 
+
+
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Galeri
                                         <i class="fa fa-angle-down"></i></a>
@@ -153,6 +161,14 @@
                                     </ul>
                                 </li>
 
+                                {{-- <li class="nav-item dropdown">
+                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">daftara
+                                        <i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="/daftar_online">Foto</a></li>
+                                        <li><a href="projects-single.html">daftar</a></li>
+                                    </ul>
+                                </li> --}}
                                 <li class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle"
                                         data-toggle="dropdown">Pendaftaran <i class="fa fa-angle-down"></i></a>
@@ -189,6 +205,22 @@
                 <!--/ Col end -->
             </div>
             <!--/ Row end -->
+
+            <div class="nav-search">
+                <span id="search" class="search-icon"><i class="fa fa-search"></i></span>
+            </div><!-- Search end -->
+
+            <div class="search-block" style="display: none;">
+                <form action="{{ route('blog.search') }}" method="GET">
+                    <label for="q" class="w-100 mb-0">
+                        <input type="text" name="query" id="q" placeholder="Pencarian...">
+
+                    </label>
+                    <span class="search-close">&times;</span>
+                    <button type="submit">Cari</button> <!-- Tombol submit untuk memulai pencarian -->
+                </form>
+            </div><!-- Site search end -->
+
 
 
         </div>

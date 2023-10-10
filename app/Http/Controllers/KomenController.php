@@ -35,6 +35,16 @@ class KomenController extends Controller
             'blog_id' => $request->input('blog_id'), // Sesuaikan dengan nama input di formulir
         ];
 
+        // Sensor kata-kata kotor dalam isi komentar
+        $content = $data['isi'];
+        $kataKotor = ['bodoh', 'goblok', 'stupid'];
+        
+        foreach ($kataKotor as $kata) {
+            $content = str_ireplace($kata, '***', $content);
+        }
+        
+        $data['isi'] = $content;
+        
         Komen::create($data);
 
         Alert::success('Sukses', 'Pesan berhasil dikirim');

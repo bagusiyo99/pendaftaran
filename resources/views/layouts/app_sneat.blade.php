@@ -1,34 +1,15 @@
 <!DOCTYPE html>
 
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
+<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
+    data-assets-path="../assets/" data-template="vertical-menu-template-free">
 
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
-<html
-  lang="en"
-  class="light-style layout-menu-fixed"
-  dir="ltr"
-  data-theme="theme-default"
-  data-assets-path="../assets/"
-  data-template="vertical-menu-template-free"
->
-  <head>
+<head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-        {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
+    {{-- <title>{{ config('app.name', 'Laravel') }}</title> --}}
 
 
     <meta name="description" content="" />
@@ -37,21 +18,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
 
-<script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
     <script type="text/javascript" src="cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- Favicon -->
-     <link rel="icon" type="image/x-icon" href="/assets/img/favicon/logo.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon/logo.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="/assets/vendor/fonts/boxicons.css" />
@@ -71,6 +51,13 @@
     {{-- fontawesome --}}
     <link rel="stylesheet" href="/assets/font/css/all.min.css" />
 
+
+    <!-- Summernote CSS - CDN Link -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <!-- //Summernote CSS - CDN Link -->
+
+
     <!-- Helpers -->
     <script src="/assets/vendor/js/helpers.js"></script>
 
@@ -81,59 +68,28 @@
     <script src="https://cdn.tiny.cloud/1/oyxnpj74pm6jw582clc7c11ha3tqn7r39qaoo4rjmp0xsusu/tinymce/6/tinymce.min.js"
         referrerpolicy="origin"></script>
     <style>
-
-      .layout-navbar .navbar-dropdown .dropdown-menu {
+        .layout-navbar .navbar-dropdown .dropdown-menu {
             min-width: 32rem;
-      }
+        }
     </style>
 
-    <script>
-        //untuk pop up bukti bayar tutor 92
-        popupCenter = ({
-            url,
-            title,
-            w,
-            h
-        }) => {
-            // Fixes dual-screen position                             Most browsers      Firefox
-            const dualScreenLeft = window.screenLeft !== undefined ? window.screenLeft : window.screenX;
-            const dualScreenTop = window.screenTop !== undefined ? window.screenTop : window.screenY;
 
-            const width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document
-                .documentElement.clientWidth : screen.width;
-            const height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document
-                .documentElement.clientHeight : screen.height;
+</head>
 
-            const systemZoom = width / window.screen.availWidth;
-            const left = (width - w) / 2 / systemZoom + dualScreenLeft
-            const top = (height - h) / 2 / systemZoom + dualScreenTop
-            const newWindow = window.open(url, title,
-                `
-      scrollbars=yes,
-      width=${w / systemZoom}, 
-      height=${h / systemZoom}, 
-      top=${top}, 
-      left=${left}
-      `
-            )
-
-            if (window.focus) newWindow.focus();
-        }
-    </script>
-  </head>
-
-  <body>
+<body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
-      <div class="layout-container">
-        <!-- Menu -->
+        <div class="layout-container">
+            <!-- Menu -->
 
-        <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-          <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
-                            <img src="/{{ settings()->get('foto') }}" width="30px">
+            <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
+                <div class="app-brand demo">
+                    <a href="index.html" class="app-brand-link">
 
-              {{-- <span class="app-brand-logo demo">
+                        <img src="/{{ settings()->get('foto') }}" width="30px">
+                        {{-- <img src="/{{ settings()->get('foto') }}" width="30px"> --}}
+
+                        {{-- <span class="app-brand-logo demo">
                 <svg
                   width="25"
                   viewBox="0 0 25 42"
@@ -188,34 +144,49 @@
                   </g>
                 </svg>
               </span> --}}
-              <span class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">{{ settings()->get('app_name') }}</span>
-            </a>
 
-            <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
-              <i class="bx bx-chevron-left bx-sm align-middle"></i>
-            </a>
-          </div>
+                        <span
+                            class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">{!! $global_about->judul !!}
+                        </span>
 
-          <div class="menu-inner-shadow"></div>
+                        {{-- <span
+                            class="app-brand-text demo menu-text fw-bolder ms-2 text-uppercase">{!! settings()->get('app_name') !!}
+                        </span> --}}
+                    </a>
 
-          <ul class="menu-inner py-1">
-            <!-- Dashboard -->
-            <li class="menu-item {{ \Route::is('operator.beranda') ? 'active' : '' }}">
-              <a href="{{ route('operator.beranda') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                <div data-i18n="Analytics">Beranda</div>
-              </a>
-            </li>
+                    <a href="javascript:void(0);"
+                        class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
+                        <i class="bx bx-chevron-left bx-sm align-middle"></i>
+                    </a>
+                </div>
 
-              <li class="menu-item {{ \Route::is('setting.*') ? 'active' : '' }}">
-              <a href="{{ route('setting.create') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data setting</div>
-              </a>
-            </li>
+                <div class="menu-inner-shadow"></div>
 
-            {{-- user.* (* mencangkup semua ) --}}
-            {{-- <!-- Layouts -->
+                <ul class="menu-inner py-1">
+                    <!-- Dashboard -->
+                    <li class="menu-item {{ \Route::is('operator.beranda') ? 'active' : '' }}">
+                        <a href="{{ route('operator.beranda') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                            <div data-i18n="Analytics">Beranda</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item {{ \Route::is('setting.*') ? 'active' : '' }}">
+                        <a href="{{ route('setting.create') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data setting</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item {{ \Route::is('about.*') ? 'active' : '' }}">
+                        <a href="{{ route('about.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Setting Home</div>
+                        </a>
+                    </li>
+
+                    {{-- user.* (* mencangkup semua ) --}}
+                    {{-- <!-- Layouts -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-layout"></i>
@@ -250,297 +221,360 @@
                 </li>
               </ul>
             </li> --}}
-    
-
-            
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Landing page</span>
-            </li>
-
-            
-            <li class="menu-item {{ \Route::is('banner.*') ? 'active' : '' }}">
-              <a href="{{ route('banner.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Banner</div>
-              </a>
-            </li>
-
-            
-            <li class="menu-item {{ \Route::is('blog.*') ? 'active' : '' }}">
-              <a href="{{ route('blog.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Blog</div>
-              </a>
-            </li>
-
-            <li class="menu-item {{ \Route::is('foto.*') ? 'active' : '' }}">
-              <a href="{{ route('foto.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Galeri</div>
-              </a>
-            </li>
-
-            <li class="menu-item {{ \Route::is('pesan.*') ? 'active' : '' }}">
-              <a href="{{ route('pesan.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Pesan</div>
-              </a>
-            </li>
-
-            <li class="menu-item {{ \Route::is('komen.*') ? 'active' : '' }}">
-              <a href="{{ route('komen.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Komen</div>
-              </a>
-            </li>
-
-
-            <li class="menu-item {{ \Route::is('informasi.*') ? 'active' : '' }}">
-              <a href="{{ route('informasi.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Informasi</div>
-              </a>
-            </li>
-
-            <li class="menu-item {{ \Route::is('formulir.*') ? 'active' : '' }}">
-              <a href="{{ route('formulir.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Formulir</div>
-              </a>
-            </li>
-
-            {{-- <li class="menu-item {{ \Route::is('daftar_online.*') ? 'active' : '' }}">
-              <a href="{{ route('daftar_online.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data Pendaftaran Siswa</div>
-              </a>
-            </li> --}}
-
-                        <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
-              <a href="{{ route('pendaftaran.index') }}" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-collection"></i>
-                <div data-i18n="Basic">Data daftars Siswa</div>
-              </a>
-            </li>
-
-   
-
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Pages</span>
-            </li>
 
 
 
- 
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Landing page</span>
+                    </li>
+
+
+                    <li class="menu-item {{ \Route::is('banner.*') ? 'active' : '' }}">
+                        <a href="{{ route('banner.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Banner</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item {{ \Route::is('guru.*') ? 'active' : '' }}">
+                        <a href="{{ route('guru.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Guru</div>
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item {{ \Route::is('blog.*') ? 'active' : '' }}">
+                        <a href="{{ route('blog.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Artikel</div>
+                        </a>
+                    </li>
+
+
+
+                    <li class="menu-item {{ \Route::is('foto.*') ? 'active' : '' }}">
+                        <a href="{{ route('foto.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Galeri</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item {{ \Route::is('pesan.*') ? 'active' : '' }}">
+                        <a href="{{ route('pesan.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Pesan</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item {{ \Route::is('komen.*') ? 'active' : '' }}">
+                        <a href="{{ route('komen.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Komen</div>
+                        </a>
+                    </li>
+
+
+                    <li class="menu-item {{ \Route::is('informasi.*') ? 'active' : '' }}">
+                        <a href="{{ route('informasi.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Informasi</div>
+                        </a>
+                    </li>
+
+                    <li class="menu-item {{ \Route::is('formulir.*') ? 'active' : '' }}">
+                        <a href="{{ route('formulir.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Formulir</div>
+                        </a>
+                    </li>
+
+
+                    {{-- <li class="menu-item {{ \Route::is('daftar_online.*') ? 'active' : '' }}">
+                        <a href="{{ route('daftar_online.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Pendaftaran Siswa</div>
+                        </a>
+                    </li> --}}
+
+                    <li class="menu-item {{ \Route::is('pendaftaran.*') ? 'active' : '' }}">
+                        <a href="{{ route('pendaftaran.index') }}" class="menu-link">
+                            <i class="menu-icon tf-icons bx bx-collection"></i>
+                            <div data-i18n="Basic">Data Pendaftaran Siswa</div>
+                        </a>
+                    </li>
 
 
 
 
-          </ul>
-        </aside>
-        <!-- / Menu -->
 
-        <!-- Layout container -->
-        <div class="layout-page">
-          <!-- Navbar -->
+                    <li class="menu-header small text-uppercase">
+                        <span class="menu-header-text">Pages</span>
+                    </li>
 
-          <nav
-            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-            id="layout-navbar"
-          >
-            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-                <i class="bx bx-menu bx-sm"></i>
-              </a>
-            </div>
+                    {{-- arsip start --}}
+                    <li class="menu-item">
+                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                            <i class='menu-icon bx bx-archive'></i>
+                            <div data-i18n="Layouts">Arsip</div>
+                        </a>
 
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <!-- Search -->
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item d-flex align-items-center">
-                  <i class="bx bx-search fs-4 lh-0"></i>
-                  <input
-                    type="text"
-                    class="form-control border-0 shadow-none"
-                    placeholder="Search..."
-                    aria-label="Search..."
-                  />
-                </div>
-              </div>
-              <!-- /Search -->
+                        <ul class="menu-sub">
+                            <li class="menu-item {{ \Route::is('guru.*') ? 'active' : '' }}">
+                                <a href="{{ route('guru.index') }}" class="menu-link">
+                                    {{-- <i class="menu-icon tf-icons bx bx-collection"></i> --}}
+                                    <div data-i18n="Basic">Data guru </div>
+                                </a>
+                            </li>
+
+                            <li class="menu-item {{ \Route::is('jurusan.*') ? 'active' : '' }}">
+                                <a href="{{ route('jurusan.index') }}" class="menu-link">
+                                    {{-- <i class="menu-icon tf-icons bx bx-collection"></i> --}}
+                                    <div data-i18n="Basic">Data Jurusan </div>
+                                </a>
+                            </li>
+
+                            <li class="menu-item {{ \Route::is('kepsek.*') ? 'active' : '' }}">
+                                <a href="{{ route('kepsek.index') }}" class="menu-link">
+                                    {{-- <i class="menu-icon tf-icons bx bx-collection"></i> --}}
+                                    <div data-i18n="Basic">Data 5 Teratas </div>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="layouts-without-navbar.html" class="menu-link">
+                                    <div data-i18n="Without navbar">Sub 2</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="layouts-container.html" class="menu-link">
+                                    <div data-i18n="Container">Sub 3</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="layouts-fluid.html" class="menu-link">
+                                    <div data-i18n="Fluid">Sub 3</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="layouts-blank.html" class="menu-link">
+                                    <div data-i18n="Blank">Sub 4</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    {{-- arsip end --}}
 
 
-              {{-- notifikasi tutor 89 --}}
-              <ul class="navbar-nav flex-row align-items-center ms-auto">
 
-                <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
-            <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
-              <i class="bx bx-bell bx-sm"></i>
-              <span class="badge bg-danger rounded-pill badge-notifications">fff</span>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end py-0">
-              <li class="dropdown-menu-header border-bottom">
-                <div class="dropdown-header d-flex align-items-center py-3">
-                  <h5 class="text-body mb-0 me-auto">Notification</h5>
-                  <a href="javascript:void(0)" class="dropdown-notifications-all text-body" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Mark all as read" data-bs-original-title="Mark all as read"><i class="bx fs-4 bx-envelope-open"></i></a>
-                </div>
-              </li>
-              <li class="dropdown-notifications-list scrollable-container ps">
-                <ul class="list-group list-group-flush">
-                          
-<li class="list-group-item list-group-item-action dropdown-notifications-item">
-                    <a href="">
-                    <div class="d-flex">
-                      <div class="flex-grow-1">
-                        <h6 class="mb-1"> g</h6>
-                        <p class="mb-0"> g</p>
-                        <small class="text-muted">ddd</small>
-                      </div>
-                      <div class="flex-shrink-0 dropdown-notifications-actions">
-                        <a href="javascript:void(0)" class="dropdown-notifications-read"><span class="badge badge-dot"></span></a>
-                        <a href="javascript:void(0)" class="dropdown-notifications-archive"><span class="bx bx-x"></span></a>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
+
+
+
                 </ul>
+            </aside>
+            <!-- / Menu -->
 
-              <div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;"></div></div></li>
-              <li class="dropdown-menu-footer border-top">
-                <a href="javascript:void(0);" class="dropdown-item d-flex justify-content-center p-3">
-                  View all notifications
-                </a>
-              </li>
-            </ul>
-          </li>
+            <!-- Layout container -->
+            <div class="layout-page">
+                <!-- Navbar -->
 
- {{-- akhir notifikasi tutor 89 --}}
-
-                <!-- User -->
-                <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
-                      <img src="/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+                <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+                    id="layout-navbar">
+                    <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
+                        <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+                            <i class="bx bx-menu bx-sm"></i>
+                        </a>
                     </div>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <div class="d-flex">
-                          <div class="flex-shrink-0 me-3">
-                            <div class="avatar avatar-online">
-                              <img src="/assets/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
+
+                    <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
+                        <!-- Search -->
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item d-flex align-items-center">
+                                <i class="bx bx-search fs-4 lh-0"></i>
+                                <input type="text" class="form-control border-0 shadow-none"
+                                    placeholder="Search..." aria-label="Search..." />
                             </div>
-                          </div>
-                          <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
-                            <small class="text-muted">{{ auth()->user()->email }}</small>
-                          </div>
                         </div>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-user me-2"></i>
-                        <span class="align-middle">My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="#">
-                        <i class="bx bx-cog me-2"></i>
-                        <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                  
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="{{ route('logout') }}">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ User -->
-              </ul>
-            </div>
-          </nav>
+                        <!-- /Search -->
 
-          <!-- / Navbar -->
 
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
-            <!-- Content -->
+                        {{-- notifikasi tutor 89 --}}
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
 
-            <div class="container-xxl flex-grow-1 container-p-y">
+                            <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                    data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                                    <i class="bx bx-bell bx-sm"></i>
+                                    <span class="badge bg-danger rounded-pill badge-notifications">0</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end py-0">
+                                    <li class="dropdown-menu-header border-bottom">
+                                        <div class="dropdown-header d-flex align-items-center py-3">
+                                            <h5 class="text-body mb-0 me-auto">Notification</h5>
+                                            <a href="javascript:void(0)" class="dropdown-notifications-all text-body"
+                                                data-bs-toggle="tooltip" data-bs-placement="top"
+                                                aria-label="Mark all as read"
+                                                data-bs-original-title="Mark all as read"><i
+                                                    class="bx fs-4 bx-envelope-open"></i></a>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-notifications-list scrollable-container ps">
+                                        <ul class="list-group list-group-flush">
 
-            @include('flash::message')
-@include('sweetalert::alert')
-            @yield('content')
-            </div>
-            <!-- / Content -->
+                                            <li
+                                                class="list-group-item list-group-item-action dropdown-notifications-item">
+                                                <a href="">
+                                                    <div class="d-flex">
+                                                        <div class="flex-grow-1">
+                                                            <h6 class="mb-1"> g</h6>
+                                                            <p class="mb-0"> g</p>
+                                                            <small class="text-muted">ddd</small>
+                                                        </div>
+                                                        <div class="flex-shrink-0 dropdown-notifications-actions">
+                                                            <a href="javascript:void(0)"
+                                                                class="dropdown-notifications-read"><span
+                                                                    class="badge badge-dot"></span></a>
+                                                            <a href="javascript:void(0)"
+                                                                class="dropdown-notifications-archive"><span
+                                                                    class="bx bx-x"></span></a>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
 
-            <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-              <div class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
-                <div class="mb-2 mb-md-0">
-                  ©
-                  <script>
-                      document.write(new Date().getFullYear());
-                  </script>
-                  , made with ❤️ by
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                                        <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                            <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;">
+                                            </div>
+                                        </div>
+                                        <div class="ps__rail-y" style="top: 0px; right: 0px;">
+                                            <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 0px;">
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dropdown-menu-footer border-top">
+                                        <a href="javascript:void(0);"
+                                            class="dropdown-item d-flex justify-content-center p-3">
+                                            View all notifications
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            {{-- akhir notifikasi tutor 89 --}}
+
+                            <!-- User -->
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
+                                    data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="/assets/img/avatars/1.png" alt
+                                            class="w-px-40 h-auto rounded-circle" />
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="avatar avatar-online">
+                                                        <img src="/assets/img/avatars/1.png" alt
+                                                            class="w-px-40 h-auto rounded-circle" />
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="fw-semibold d-block">{{ Auth::user()->name }}</span>
+                                                    <small class="text-muted">{{ auth()->user()->email }}</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bx bx-user me-2"></i>
+                                            <span class="align-middle">My Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="bx bx-cog me-2"></i>
+                                            <span class="align-middle">Settings</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('logout') }}">
+                                            <i class="bx bx-power-off me-2"></i>
+                                            <span class="align-middle">Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--/ User -->
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- / Navbar -->
+
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <!-- Content -->
+
+                    <div class="container-xxl flex-grow-1 container-p-y">
+
+                        @include('flash::message')
+                        @include('sweetalert::alert')
+                        @yield('content')
+                    </div>
+                    <!-- / Content -->
+
+                    <!-- Footer -->
+                    <footer class="content-footer footer bg-footer-theme">
+                        <div
+                            class="container-xxl d-flex flex-wrap justify-content-between py-2 flex-md-row flex-column">
+                            <div class="mb-2 mb-md-0">
+                                ©
+                                <script>
+                                    document.write(new Date().getFullYear());
+                                </script>
+                                , made with ❤️ by
+                                <a href="https://themeselection.com" target="_blank"
+                                    class="footer-link fw-bolder">ThemeSelection</a>
+                            </div>
+                            <div>
+                                <a href="https://themeselection.com/license/" class="footer-link me-4"
+                                    target="_blank">License</a>
+                                <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More
+                                    Themes</a>
+
+                                <a href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                                    target="_blank" class="footer-link me-4">Documentation</a>
+
+                                <a href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
+                                    target="_blank" class="footer-link me-4">Support</a>
+                            </div>
+                        </div>
+                    </footer>
+                    <!-- / Footer -->
+
+                    <div class="content-backdrop fade"></div>
                 </div>
-                <div>
-                  <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
-                  <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
-
-                  <a
-                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Documentation</a
-                  >
-
-                  <a
-                    href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
-                    target="_blank"
-                    class="footer-link me-4"
-                    >Support</a
-                  >
-                </div>
-              </div>
-            </footer>
-            <!-- / Footer -->
-
-            <div class="content-backdrop fade"></div>
-          </div>
-          <!-- Content wrapper -->
+                <!-- Content wrapper -->
+            </div>
+            <!-- / Layout page -->
         </div>
-        <!-- / Layout page -->
-      </div>
 
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
+        <!-- Overlay -->
+        <div class="layout-overlay layout-menu-toggle"></div>
     </div>
-    <!-- / Layout wrapper -->
 
-    {{-- <div class="buy-now">
-      <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
-        target="_blank"
-        class="btn btn-danger btn-buy-now"
-        >Upgrade to Pro</a
-      >
-    </div> --}}
-
-    <!-- Core JS -->
-    <!-- build:js assets/vendor/js/core.js -->
     <script src="/assets/vendor/libs/jquery/jquery.js"></script>
     <script src="/assets/vendor/libs/popper/popper.js"></script>
     <script src="/assets/vendor/js/bootstrap.js"></script>
@@ -558,46 +592,45 @@
     <!-- Page JS -->
     <script src="/assets/js/dashboards-analytics.js"></script>
 
-        
+
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
     <script src="/datatable/script.js"></script>
 
-        <!-- plugin harga -->
+    <!-- plugin harga -->
     <script src="/assets/js/jquery.mask.min.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    
+
     {{-- select plugin --}}
     <link rel="stylesheet" href="/assets/select/select2.min.css">
-     <script src="/assets/select/select2.min.js"></script>
-     {{-- <script>
-         // In your Javascript (external .js resource or <script> tag)
-         $(document).ready(function() {
-             $('.rupiah').mask("#.##0", {
-                 reverse: true
-             });
-
-             $('.select2').select2();
-         });
-     </script> --}}
+    <script src="/assets/select/select2.min.js"></script>
 
 
- <script>
-     tinymce.init({
-         selector: 'textarea#tiny'
-     });
- </script>
 
- // Prevent Bootstrap dialog from blocking focusin
-document.addEventListener('focusin', (e) => {
-  if (e.target.closest(".tox-tinymce, .tox-tinymce-aux, .moxman-window, .tam-assetmanager-root") !== null) {
-    e.stopImmediatePropagation();
-  }
-});
+    <!-- Summernote JS - CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#textya").summernote();
+            $('.dropdown-toggle').dropdown();
+        });
+    </script>
+    <!-- //Summernote JS - CDN Link -->
 
-  </body>
+
+    <script>
+        tinymce.init({
+            selector: 'textarea#tiny'
+
+        });
+    </script>
+
+
+
+</body>
+
 </html>
