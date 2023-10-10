@@ -1,5 +1,8 @@
-# Pendaftara Sekolah
-Website Yang memberikan Informasi Tentang Pembayaran SPP Sekolah
+![dafatrar ](https://github.com/bagusiyo99/pendaftaran/assets/73180981/6a43856b-06ab-463d-874a-0bf7593ac2ce)
+
+
+
+# Pendaftaran Sekolah
 
 installasi:
 - Buka file pada Text Editor
