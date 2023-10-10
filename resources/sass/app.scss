@@ -5,7 +5,13 @@
 @import 'variables';
 
 // Bootstrap
-@import 'bootstrap/scss/bootstrap';
+// Jika paket 'bootstrap-icons' terletak di dalam node_modules
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+// Jika Anda menggunakan variabel $node_modules untuk mengacu pada direktori node_modules
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+
 
 // DataTables
 @import 'bootstrap-icons/font/bootstrap-icons.css';
