@@ -1,5 +1,15 @@
-![dafatrar ](https://github.com/bagusiyo99/pendaftaran/assets/73180981/6a43856b-06ab-463d-874a-0bf7593ac2ce)
+![admin](https://github.com/bagusiyo99/pendaftaran/assets/73180981/bf06ea37-2ce4-4624-a5d9-7cc2c852ad34)
+ini merupakan salah satu fitur di admin
 
+![artikel](https://github.com/bagusiyo99/pendaftaran/assets/73180981/4a16f53f-469b-4b31-8d30-e59f975eb00f)
+ini merupakan salah satu fitur di home
+
+
+![daftar](https://github.com/bagusiyo99/pendaftaran/assets/73180981/fb3207cc-e24a-4fbc-8687-52d1bdf30fa3)
+ini merupakan fitur pendafataran di home, saya telah melimit 500 pendaftar, jika terisi semua akan berubah menjadi tampilan di bawah ini
+
+![dafatrar ](https://github.com/bagusiyo99/pendaftaran/assets/73180981/995b3002-99d6-4d8e-ba8c-3132afd72293)
+ini tampilan jika pendaftaran ditutup
 
 
 # Pendaftaran Sekolah
