@@ -41,5 +41,4 @@ installasi:
 - Ketikkan perintah: php artisan migrate:fresh --seed
 - Ketikkan perintah: php artisan serve
 - panel admin : admin@gmail.com | password : 12345
-- php 7
-- Company profile sekolah lengkap pendaftaran dan pembayaran spp
+
