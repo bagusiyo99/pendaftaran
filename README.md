@@ -29,7 +29,6 @@ ini tampilan jika pendaftaran telah mencapai 500 pendaftar, maka akan otomatis t
 
 
 # Pendaftaran Sekolah
-
 installasi:
 - Buka file pada Text Editor
 - Buka Terminal
