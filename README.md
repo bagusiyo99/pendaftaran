@@ -42,3 +42,6 @@ installasi:
 - Ketikkan perintah: php artisan serve
 - panel admin : admin@gmail.com | password : 12345
 
+ketika tidak ada database nya
+- php artisan db:seed
+
