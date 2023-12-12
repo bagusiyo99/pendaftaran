@@ -39,6 +39,7 @@ installasi:
 - Ketikkan perintah: composer install
 - Ketikkan perintah: php artisan key:generate
 - Ketikkan perintah: php artisan migrate:fresh --seed
+- npm install dan npm run dev
 - Ketikkan perintah: php artisan serve
 - panel admin : admin@gmail.com | password : 12345
 
