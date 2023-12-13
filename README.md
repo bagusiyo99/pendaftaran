@@ -29,7 +29,7 @@ ini tampilan jika pendaftaran telah mencapai 500 pendaftar, maka akan otomatis t
 
 
 
-# Website Sekolah
+# Website Perkenalan Sekolah
 installasi:
 - Buka file pada Text Editor
 - Buka Terminal
