@@ -1,4 +1,4 @@
-#Company Profile  Pendaftaran Sekolah
+#Company Profile Sekolah
 ini merupakan salah satu fitur di admin
 
 ![admin](https://github.com/bagusiyo99/pendaftaran/assets/73180981/d866af60-b63a-411b-bfd2-b5a7ffe82b9c)
