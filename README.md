@@ -1,4 +1,4 @@
-#Website Pendaftaran Sekolah
+Website Pendaftaran Sekolah
 
 ini merupakan salah satu fitur di admin
 
